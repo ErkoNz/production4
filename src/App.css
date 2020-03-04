@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+    
+  
+  
+  min-height: 100vh;
+  text-align: center;
+}
+
+.navApp{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background: rgb(37, 44, 46);
+  color: white;
+
+}
+
+.navLinks{
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.logoIcon{
+  display: inline;
+  margin: 10px;
+}
+
+.testt{
+  font-size: 40px;
+  margin: 0px 0 -10px 0;
+  animation:spin 6s linear infinite;
+}
+
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

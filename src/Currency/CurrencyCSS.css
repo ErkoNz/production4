@@ -1,0 +1,44 @@
+.bodyCurrency {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 90vh;
+
+  }
+  
+  .AppCurrency {
+  background-color: rgba(255,255,255,.4);
+  padding: 4rem 6rem 7rem 6rem;
+  border-radius: 30px;
+  }
+  h1 {
+    margin: 0;
+    margin-bottom: 4rem;
+    font-size: 45px;
+  }
+  
+  .input{
+    border: 1px solid #333;
+    border-radius: 1em;
+    padding: .25rem;
+    width: 10em;
+    height: 2em;
+    margin-right: 10px;
+    font-size: 17px;
+    outline: none;
+  }
+  
+  
+  
+  .equals{
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  
+  select{
+    font-size: 20px;
+    border-radius: 7px;
+    padding: 10px;
+  }
