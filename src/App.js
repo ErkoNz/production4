@@ -15,12 +15,12 @@ import IsometricCSS from './IsometricCSS/IsometricCSS';
 
 function App() {
   return (
-    <Router>
+    <Router base="production4/">
       <div className="App">
         <Nav />
         <Switch>
-          <Route path="/production4" component={Home} exact />
-          <Route path="/production4/Currency/CurrencyApp" component={CurrencyApp} />
+          <Route path="/" component={Home} exact />
+          <Route path="/Currency/CurrencyApp" component={CurrencyApp} />
           <Route path="/TicTacToe/TicTacToe" component={TicTacToe} />
           <Route path="/Todo/TodoApp" component={Todo} />
           <Route path="/Recepty/Recepty" component={Recepty} />
