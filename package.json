@@ -13,7 +13,7 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.1"
   },
-  "homepage": "https://ErkoNz.github.io/production4",
+  "homepage": "https://ErkoNz.github.io/production4/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
