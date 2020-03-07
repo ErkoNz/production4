@@ -3,7 +3,7 @@ import './App.css';
 import Nav from './Nav';
 
 import CurrencyApp from './Currency/CurrencyApp'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { HashRouter as Router, Switch, Route } from 'react-router-dom'
 import TicTacToe from './TicTacToe/TicTacToe';
 import Todo from './Todo/TodoApp';
 import Recepty from './Recepty/Recepty';
@@ -15,7 +15,7 @@ import IsometricCSS from './IsometricCSS/IsometricCSS';
 
 function App() {
   return (
-    <Router basename={process.env.PUBLIC_URL}>
+    <Router basename="/">
       <div className="App">
         <Nav />
         <Switch>
