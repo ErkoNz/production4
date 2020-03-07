@@ -10,23 +10,23 @@ function Nav() {
 
     return (
         <nav className="navApp">
-            <Link style={navStyle} to='/'>
+            <Link style={navStyle} to='/production4'>
                 <div>
-                    <h3 className="logoIcon"> React APP 23 38</h3>
+                    <h3 className="logoIcon"> React APP 23 50</h3>
                     <FaReact className="testt" />
                 </div>
             </Link>
             <ul className="navLinks">
-                <Link style={navStyle} to='#/IsometricCSS/IsometricCSS'>
+                <Link style={navStyle} to='/IsometricCSS/IsometricCSS'>
                     <li>isometric CSS</li>
                 </Link>
-                <Link style={navStyle} to='/production4/Currency/CurrencyApp'>
+                <Link style={navStyle} to='/Currency/CurrencyApp'>
                     <li>Prevod</li>
                 </Link>
-                <Link style={navStyle} to='production4/TicTacToe/TicTacToe'>
+                <Link style={navStyle} to='/TicTacToe/TicTacToe'>
                     <li>TicTacToe</li>
                 </Link>
-                <Link style={navStyle} to='/production4/Todo/TodoApp'>
+                <Link style={navStyle} to='/Todo/TodoApp'>
                     <li>Todo</li>
                 </Link>
                 <Link style={navStyle} to='/Recepty/Recepty'>
