@@ -19,7 +19,7 @@ function App() {
       <div className="App">
         <Nav />
         <Switch>
-          <Route path="/" component={Home} exact />
+          <Route path="/production4/" component={Home} exact />
           <Route path="#/Currency/CurrencyApp" component={CurrencyApp} />
           <Route path="#/TicTacToe/TicTacToe" component={TicTacToe} />
           <Route path="#/Todo/TodoApp" component={Todo} />

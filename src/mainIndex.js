@@ -16,7 +16,7 @@ function MainIndex() {
 
     return (
         <div className="MainDiv">
-            <h1>ReactJSasdasd</h1>
+            <h1>ReactJSasdasdXXXXX</h1>
             {/* <img src={require('./imgs/1.png')} /> */}
             <div className="contMainIndex">
                 {car.map(transaction => (
