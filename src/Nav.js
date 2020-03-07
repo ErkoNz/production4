@@ -17,16 +17,16 @@ function Nav() {
                 </div>
             </Link>
             <ul className="navLinks">
-                <Link style={navStyle} to='/IsometricCSS/IsometricCSS'>
+                <Link style={navStyle} to='#/IsometricCSS/IsometricCSS'>
                     <li>isometric CSS</li>
                 </Link>
-                <Link style={navStyle} to='/Currency/CurrencyApp'>
+                <Link style={navStyle} to='/production4/Currency/CurrencyApp'>
                     <li>Prevod</li>
                 </Link>
-                <Link style={navStyle} to='/TicTacToe/TicTacToe'>
+                <Link style={navStyle} to='production4/TicTacToe/TicTacToe'>
                     <li>TicTacToe</li>
                 </Link>
-                <Link style={navStyle} to='/Todo/TodoApp'>
+                <Link style={navStyle} to='/production4/Todo/TodoApp'>
                     <li>Todo</li>
                 </Link>
                 <Link style={navStyle} to='/Recepty/Recepty'>
