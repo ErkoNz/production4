@@ -12,7 +12,7 @@ function Nav() {
         <nav className="navApp">
             <Link style={navStyle} to='/'>
                 <div>
-                    <h3 className="logoIcon"> React APP 0 21</h3>
+                    <h3 className="logoIcon"> React APP 0 30</h3>
                     <FaReact className="testt" />
                 </div>
             </Link>
