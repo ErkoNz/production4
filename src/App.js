@@ -19,9 +19,9 @@ function App() {
       <div className="App">
         <Nav />
         <Switch>
-          <Route path="/" component={Home} exact />
+          <Route path="#/" component={Home} exact />
           <Route path="/Currency/CurrencyApp" component={CurrencyApp} />
-          <Route path="/TicTacToe/TicTacToe" component={TicTacToe} />
+          <Route path="#/TicTacToe/TicTacToe" component={TicTacToe} />
           <Route path="/Todo/TodoApp" component={Todo} />
           <Route path="/Recepty/Recepty" component={Recepty} />
           <Route path="/ReceptyV2/ReceptyV2" exact component={ReceptyV2} />
