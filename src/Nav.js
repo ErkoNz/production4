@@ -10,7 +10,7 @@ function Nav() {
 
     return (
         <nav className="navApp">
-            <Link style={navStyle} to='/production4'>
+            <Link style={navStyle} to='/'>
                 <div>
                     <h3 className="logoIcon"> React APP 23 50</h3>
                     <FaReact className="testt" />

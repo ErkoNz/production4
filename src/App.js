@@ -22,7 +22,7 @@ function App() {
           <Route path="/" component={Home} exact />
           <Route path="/Currency/CurrencyApp" component={CurrencyApp} />
           <Route path="/TicTacToe/TicTacToe" component={TicTacToe} />
-          <Route path="/production4/Todo/TodoApp" component={Todo} />
+          <Route path="/Todo/TodoApp" component={Todo} />
           <Route path="/Recepty/Recepty" component={Recepty} />
           <Route path="/ReceptyV2/ReceptyV2" exact component={ReceptyV2} />
           <Route path="/ReceptyV2/ReceptyV2/:id" component={ReceptInfo} />
