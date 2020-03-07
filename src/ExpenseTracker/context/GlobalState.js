@@ -4,8 +4,14 @@ import AppReducer from './AppReducer'
 const LOCAL_STORAGE_KEY = 'ExpenseTracker'
 
 const localVar = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
-const initialState = {
+let initialState = {
     transactions: localVar
+}
+
+if (!JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))) {
+    initialState = {
+        transactions: []
+    }
 }
 
 
