@@ -15,7 +15,7 @@ import IsometricCSS from './IsometricCSS/IsometricCSS';
 
 function App() {
   return (
-    <Router basename="/production4">
+    <Router basename={process.env.PUBLIC_URL}>
       <div className="App">
         <Nav />
         <Switch>
