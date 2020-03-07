@@ -20,12 +20,12 @@ function App() {
         <Nav />
         <Switch>
           <Route path="/" component={Home} exact />
-          <Route path="/Currency/CurrencyApp" component={CurrencyApp} />
-          <Route path="/TicTacToe/TicTacToe" component={TicTacToe} />
-          <Route path="/Todo/TodoApp" component={Todo} />
-          <Route path="/Recepty/Recepty" component={Recepty} />
-          <Route path="/ReceptyV2/ReceptyV2" exact component={ReceptyV2} />
-          <Route path="/ReceptyV2/ReceptyV2/:id" component={ReceptInfo} />
+          <Route path="#/Currency/CurrencyApp" component={CurrencyApp} />
+          <Route path="#/TicTacToe/TicTacToe" component={TicTacToe} />
+          <Route path="#/Todo/TodoApp" component={Todo} />
+          <Route path="/production4/Recepty/Recepty" component={Recepty} />
+          <Route path="/production4/ReceptyV2/ReceptyV2" exact component={ReceptyV2} />
+          <Route path="/production4/ReceptyV2/ReceptyV2/:id" component={ReceptInfo} />
           <Route path="/ExpenseTracker/ExpenseTrackerApp" component={ExpenseTrackerApp} />
           <Route path="/IsometricCSS/IsometricCSS" component={IsometricCSS} />
         </Switch>
