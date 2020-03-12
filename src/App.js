@@ -12,6 +12,7 @@ import ReceptInfo from './ReceptyV2/ReceptInfo';
 import MainIndex from './mainIndex';
 import ExpenseTrackerApp from './ExpenseTracker/ExpenseTrackerApp';
 import IsometricCSS from './IsometricCSS/IsometricCSS';
+import CovidApp from './Covid/CovidApp';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/ReceptyV2/ReceptyV2/:id" component={ReceptInfo} />
           <Route path="/ExpenseTracker/ExpenseTrackerApp" component={ExpenseTrackerApp} />
           <Route path="/IsometricCSS/IsometricCSS" component={IsometricCSS} />
+          <Route path="/Covid/CovidApp" component={CovidApp} />
         </Switch>
       </div>
     </Router>

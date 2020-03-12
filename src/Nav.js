@@ -38,6 +38,9 @@ function Nav() {
                 <Link style={navStyle} to='/ExpenseTracker/ExpenseTrackerApp'>
                     <li>Expense Tracker</li>
                 </Link>
+                <Link style={navStyle} to='/Covid/CovidApp'>
+                    <li>Covid - 19</li>
+                </Link>
             </ul>
         </nav>
     )

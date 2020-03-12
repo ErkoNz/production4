@@ -16,7 +16,7 @@ function MainIndex() {
 
     return (
         <div className="MainDiv">
-            <h1>react</h1>
+            <h1>ReactJS</h1>
             <div className="contMainIndex">
                 {car.map(transaction => (
                     <Link to={transaction.link}>
