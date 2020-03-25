@@ -1,29 +1,30 @@
 {
   "files": {
-    "main.css": "/production4/static/css/main.fd70051b.chunk.css",
-    "main.js": "/production4/static/js/main.6a1e25dd.chunk.js",
-    "main.js.map": "/production4/static/js/main.6a1e25dd.chunk.js.map",
+    "main.css": "/production4/static/css/main.67af024c.chunk.css",
+    "main.js": "/production4/static/js/main.4e086f3a.chunk.js",
+    "main.js.map": "/production4/static/js/main.4e086f3a.chunk.js.map",
     "runtime-main.js": "/production4/static/js/runtime-main.8096dec9.js",
     "runtime-main.js.map": "/production4/static/js/runtime-main.8096dec9.js.map",
-    "static/js/2.aab09933.chunk.js": "/production4/static/js/2.aab09933.chunk.js",
-    "static/js/2.aab09933.chunk.js.map": "/production4/static/js/2.aab09933.chunk.js.map",
+    "static/js/2.04a4efdd.chunk.js": "/production4/static/js/2.04a4efdd.chunk.js",
+    "static/js/2.04a4efdd.chunk.js.map": "/production4/static/js/2.04a4efdd.chunk.js.map",
     "index.html": "/production4/index.html",
-    "precache-manifest.e6ba17617046459099cd7cc2249d0144.js": "/production4/precache-manifest.e6ba17617046459099cd7cc2249d0144.js",
+    "precache-manifest.f2b3973037494dd365f4d849ed601299.js": "/production4/precache-manifest.f2b3973037494dd365f4d849ed601299.js",
     "service-worker.js": "/production4/service-worker.js",
-    "static/css/main.fd70051b.chunk.css.map": "/production4/static/css/main.fd70051b.chunk.css.map",
-    "static/js/2.aab09933.chunk.js.LICENSE.txt": "/production4/static/js/2.aab09933.chunk.js.LICENSE.txt",
+    "static/css/main.67af024c.chunk.css.map": "/production4/static/css/main.67af024c.chunk.css.map",
+    "static/js/2.04a4efdd.chunk.js.LICENSE.txt": "/production4/static/js/2.04a4efdd.chunk.js.LICENSE.txt",
     "static/media/2.png": "/production4/static/media/2.388881fe.png",
     "static/media/3.png": "/production4/static/media/3.dcc8c6ba.png",
     "static/media/4.png": "/production4/static/media/4.c2da1211.png",
     "static/media/5.png": "/production4/static/media/5.c746cd99.png",
     "static/media/6.png": "/production4/static/media/6.569801e0.png",
     "static/media/7.png": "/production4/static/media/7.ef3acd65.png",
-    "static/media/coronaIcon.svg": "/production4/static/media/coronaIcon.5e2b6319.svg"
+    "static/media/coronaIcon.svg": "/production4/static/media/coronaIcon.02ed3e1a.svg",
+    "static/media/covidHP.svg": "/production4/static/media/covidHP.cd026ab0.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.8096dec9.js",
-    "static/js/2.aab09933.chunk.js",
-    "static/css/main.fd70051b.chunk.css",
-    "static/js/main.6a1e25dd.chunk.js"
+    "static/js/2.04a4efdd.chunk.js",
+    "static/css/main.67af024c.chunk.css",
+    "static/js/main.4e086f3a.chunk.js"
   ]
 }
