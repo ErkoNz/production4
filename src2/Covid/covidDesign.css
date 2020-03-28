@@ -1,0 +1,51 @@
+
+.cardsDiv{
+    border:3px solid red;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+
+.cards {
+    border:2px solid yellow;
+    width: 30%;
+    height: 150px;
+}
+
+
+.circle{
+    background: rgba(131, 6, 6, 0.767);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    fill: white;
+}
+
+.circle{
+   
+    animation:spin 12s linear infinite;
+  }
+  
+  @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } } 
+
+
+
+
+.circle svg {
+    fill: red;
+}
+@media only screen and (max-width: 800px) {
+    .cardsDiv{
+        flex-direction: column;
+    }
+
+    .cards {
+        width: 70%;
+    }
+}

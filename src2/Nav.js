@@ -153,31 +153,30 @@ function Nav() {
                 </div>
             </Link>
             <ul style={mystyle} className="navLinks" onClick={close}>
-                <li>
-                    <Link style={navStyle} to='/IsometricCSS/IsometricCSS'>isometric CSS </Link>
-                </li>
-                <li>
-                    <Link style={navStyle} to='/Currency/CurrencyApp'>Prevod</Link>
-                </li>
-                <li>
-                    <Link style={navStyle} to='/TicTacToe/TicTacToe'>TicTacToe </Link>
-                </li>
-                <li>
-                    <Link style={navStyle} to='/Todo/TodoApp'>Todo </Link>
-                </li>
-                <li>
-                    <Link style={navStyle} to='/Recepty/Recepty'>Recepty</Link>
-                </li>
-                <li>
-                    <Link style={navStyle} to='/ReceptyV2/ReceptyV2'>ReceptyV2</Link>
-                </li>
-                <li>
-                    <Link style={navStyle} to='/ExpenseTracker/ExpenseTrackerApp'>Expense Tracker </Link>
-                </li>
-                <li>
-                    <Link style={navStyle} to='/Covid/CovidApp'>Covid - 19</Link>
-                </li>
-
+                <Link style={navStyle} to='/IsometricCSS/IsometricCSS'>
+                    <li>isometric CSS</li>
+                </Link>
+                <Link style={navStyle} to='/Currency/CurrencyApp'>
+                    <li>Prevod</li>
+                </Link>
+                <Link style={navStyle} to='/TicTacToe/TicTacToe'>
+                    <li>TicTacToe</li>
+                </Link>
+                <Link style={navStyle} to='/Todo/TodoApp'>
+                    <li>Todo</li>
+                </Link>
+                <Link style={navStyle} to='/Recepty/Recepty'>
+                    <li>Recepty</li>
+                </Link>
+                <Link style={navStyle} to='/ReceptyV2/ReceptyV2'>
+                    <li>ReceptyV2</li>
+                </Link>
+                <Link style={navStyle} to='/ExpenseTracker/ExpenseTrackerApp'>
+                    <li>Expense Tracker</li>
+                </Link>
+                <Link style={navStyle} to='/Covid/CovidApp'>
+                    <li>Covid - 19</li>
+                </Link>
             </ul>
 
             <div className="burger" id="notClick" onClick={changeBurger}>
