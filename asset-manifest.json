@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/production4/static/css/main.87147455.chunk.css",
-    "main.js": "/production4/static/js/main.e88bb3bc.chunk.js",
-    "main.js.map": "/production4/static/js/main.e88bb3bc.chunk.js.map",
+    "main.css": "/production4/static/css/main.574d753b.chunk.css",
+    "main.js": "/production4/static/js/main.3ec615c5.chunk.js",
+    "main.js.map": "/production4/static/js/main.3ec615c5.chunk.js.map",
     "runtime-main.js": "/production4/static/js/runtime-main.8096dec9.js",
     "runtime-main.js.map": "/production4/static/js/runtime-main.8096dec9.js.map",
     "static/css/2.b90ce945.chunk.css": "/production4/static/css/2.b90ce945.chunk.css",
-    "static/js/2.d7fe1d9a.chunk.js": "/production4/static/js/2.d7fe1d9a.chunk.js",
-    "static/js/2.d7fe1d9a.chunk.js.map": "/production4/static/js/2.d7fe1d9a.chunk.js.map",
+    "static/js/2.f615a5fe.chunk.js": "/production4/static/js/2.f615a5fe.chunk.js",
+    "static/js/2.f615a5fe.chunk.js.map": "/production4/static/js/2.f615a5fe.chunk.js.map",
     "index.html": "/production4/index.html",
-    "precache-manifest.e7333a4477656aeffd07c88e63575766.js": "/production4/precache-manifest.e7333a4477656aeffd07c88e63575766.js",
+    "precache-manifest.18107a4ef64028c1cd7323fca3b53a01.js": "/production4/precache-manifest.18107a4ef64028c1cd7323fca3b53a01.js",
     "service-worker.js": "/production4/service-worker.js",
     "static/css/2.b90ce945.chunk.css.map": "/production4/static/css/2.b90ce945.chunk.css.map",
-    "static/css/main.87147455.chunk.css.map": "/production4/static/css/main.87147455.chunk.css.map",
-    "static/js/2.d7fe1d9a.chunk.js.LICENSE.txt": "/production4/static/js/2.d7fe1d9a.chunk.js.LICENSE.txt",
+    "static/css/main.574d753b.chunk.css.map": "/production4/static/css/main.574d753b.chunk.css.map",
+    "static/js/2.f615a5fe.chunk.js.LICENSE.txt": "/production4/static/js/2.f615a5fe.chunk.js.LICENSE.txt",
     "static/media/coronaIcon.svg": "/production4/static/media/coronaIcon.02ed3e1a.svg",
     "static/media/earth.svg": "/production4/static/media/earth.cdc4522b.svg",
     "static/media/slovakiaIcon.svg": "/production4/static/media/slovakiaIcon.a29682dd.svg",
@@ -22,8 +22,8 @@
   "entrypoints": [
     "static/js/runtime-main.8096dec9.js",
     "static/css/2.b90ce945.chunk.css",
-    "static/js/2.d7fe1d9a.chunk.js",
-    "static/css/main.87147455.chunk.css",
-    "static/js/main.e88bb3bc.chunk.js"
+    "static/js/2.f615a5fe.chunk.js",
+    "static/css/main.574d753b.chunk.css",
+    "static/js/main.3ec615c5.chunk.js"
   ]
 }
