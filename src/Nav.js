@@ -1,190 +1,66 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { FaReact } from 'react-icons/fa';
-// import { GiConsoleController } from 'react-icons/gi';
-
+import './nav.css'
+import earthIcon from "./imgs/earth.svg"
+import slovakiaIcon from "./imgs/slovakiaIcon.svg"
 
 function Nav() {
-
-    const [burgerIcon, setBurgerIcon] = useState(true)
-    const [mystyle, setMystyle] = useState({})
-
+    const [state, setState] = useState()
     let navStyle = {
         color: 'white',
     }
-
-    // window.addEventListener('click', function (e) {
-    //     if (document.getElementById('clickbox').contains(e.target)) {
-    //         console.log(e.target)
-    //         return () => {
-    //             window.removeEventListener('click', e);
-    //         };
-    //     }
-
-
-    //     // window.addEventListener('keydown', handleEsc);
-    //     return () => {
-    //         window.removeEventListener('click', e);
-    //     };
-    // })
-    // else {
-    //     console.log(e.target)
-    // }
-    // } else {
-    //     if (burgerIcon) {
-    //         console.log("X")
-    //         navSlide()
-    //         setMystyle({
-    //             transform: "translateX(100%)",
-    //         })
-    //     }
-    // }
-    // console.log(burgerIcon)
-    // if (burgerIcon) {
-    //     console.log("je otvorene")
-    // }
-    // console.log(e.target.className)
-
-
-
-    // if (e.target.className === "navApp"
-    //     || e.target.className == "logoIcon"
-    //     || e.target.className == "line1"
-    //     || e.target.className == "line2"
-    //     || e.target.className == "line3"
-    //     || e.target.className == "burger") {
-    //     console.log("navaaaap")
-    // }
-    // else {
-    //     console.log("do this")
-    //     setMystyle({
-    //         transform: "translateX(100%)",
-    //     })
-    // }
-
-    // })
-
-
-    const navSlide = () => {
-        let burger = document.querySelector('.burger')
-        burger.classList.toggle("toggle");
-    }
-
-    function changeBurger() {
-        navSlide()
-        setBurgerIcon(!burgerIcon)
-        if (burgerIcon) {
-            setMystyle({
-                // transform: "translateX(0%)",
-                right: "50%",
-                transition: ".3s ease",
-            })
-        }
-        else {
-            setMystyle({
-                // transform: "translateX(100%)",
-                right: "0%",
-                transition: ".3s ease",
-            })
-        }
-    }
-
-
-    function close() {
-        // if (!burgerIcon) {
-        //     setMystyle({
-        //         right: "0%",
-        //         transition: ".3s ease",
-        //     })
-        //     setBurgerIcon(!burgerIcon)
-        //     navSlide()
-        // }
-    }
-
     useEffect(() => {
-        let handleEsc;
-        let handleClick;
-        if (!burgerIcon) {
-            handleEsc = (event) => {
-                if (event.keyCode === 27) {
-                    setMystyle({
-                        right: "0%",
-                        transition: ".3s ease",
-                    })
-                    navSlide()
-                    setBurgerIcon(!burgerIcon)
-                }
-            }
+        const LoadData = async () => {
+            const response = await fetch('https://mapa.covid.chat/map_data')
+            const data = await response.json()
 
-            handleClick = (event) => {
-                if (!document.getElementById('clickbox').contains(event.target) || document.getElementById('clickbox').contains(event.target)) {
-                    if (!document.getElementById('notClick').contains(event.target)) {
-                        setMystyle({
-                            right: "0%",
-                            transition: ".3s ease",
-                        })
-                        navSlide()
-                        setBurgerIcon(!burgerIcon)
-                    }
-                }
-            }
+            setState(data.tested_chart[data.tested_chart.length - 1])
         }
-        window.addEventListener('keydown', handleEsc);
-        window.addEventListener('click', handleClick);
+        LoadData()
+    }, [])
 
 
-        //     window.addEventListener('click', function (e) {
-        // if (document.getElementById('clickbox').contains(e.target)) {
+    const PocPripadov = () => {
+        if (state) {
+            let sklnovaniePripadov = "prípadov"
+            console.log(state.infected)
+            if (state.day === 1)
+                sklnovaniePripadov = "prípad"
+            else if (state.infected > 1 && state.infected < 5)
+                sklnovaniePripadov = "prípady"
 
+            return (
+                <div>{state.day}: <span>{state.infected}</span> {sklnovaniePripadov}</div>
+            )
+        }
+        else return null
+    }
 
-
-        return () => {
-            window.removeEventListener('keydown', handleEsc);
-            window.removeEventListener('click', handleClick);
-        };
-    }, [burgerIcon])
+    // function doubleClickFC() {
+    //     window.location.href = "#/Todo"
+    // }
 
     return (
-        <nav className="navApp" id="clickbox" >
-            <Link onClick={close} style={navStyle} to='/'>
-                <div>
-                    <h3 className="logoIcon"> React APP</h3>
-                    <FaReact className="testt" />
-                </div>
-            </Link>
-            <ul style={mystyle} className="navLinks" onClick={close}>
+        <nav className="navApp" >
+            <ul className="navLinks">
                 <li>
-                    <Link style={navStyle} to='/IsometricCSS/IsometricCSS'>isometric CSS </Link>
+                    <Link style={navStyle} to='/Covid/CovidApp'>
+                        <div>
+                            <img alt="" src={earthIcon} className="earthIcon" />Covid vo svete
+                        </div>
+                    </Link>
                 </li>
                 <li>
-                    <Link style={navStyle} to='/Currency/CurrencyApp'>Prevod</Link>
+                    <Link style={navStyle} to='/Covid/CovidSK'>
+                        <div>
+                            <img alt="" src={slovakiaIcon} className="svkIcon" />Covid na Slovensku
+                           <div className="novePripady">
+                                {PocPripadov()}
+                            </div>
+                        </div>
+                    </Link>
                 </li>
-                <li>
-                    <Link style={navStyle} to='/TicTacToe/TicTacToe'>TicTacToe </Link>
-                </li>
-                <li>
-                    <Link style={navStyle} to='/Todo/TodoApp'>Todo </Link>
-                </li>
-                <li>
-                    <Link style={navStyle} to='/Recepty/Recepty'>Recepty</Link>
-                </li>
-                <li>
-                    <Link style={navStyle} to='/ReceptyV2/ReceptyV2'>ReceptyV2</Link>
-                </li>
-                <li>
-                    <Link style={navStyle} to='/ExpenseTracker/ExpenseTrackerApp'>Expense Tracker </Link>
-                </li>
-                <li>
-                    <Link style={navStyle} to='/Covid/CovidApp'>Covid - 19</Link>
-                </li>
-
             </ul>
-
-            <div className="burger" id="notClick" onClick={changeBurger}>
-                <div className="line1" ></div>
-                <div className="line2" ></div>
-                <div className="line3"></div>
-            </div>
         </nav>
     )
 }

@@ -2,48 +2,39 @@ import React from 'react';
 import './App.css';
 import Nav from './Nav';
 
-import CurrencyApp from './Currency/CurrencyApp'
 import { HashRouter as Router, Switch, Route } from 'react-router-dom'
-import TicTacToe from './TicTacToe/TicTacToe';
-import Todo from './Todo/TodoApp';
-import Recepty from './Recepty/Recepty';
-import ReceptyV2 from './ReceptyV2/ReceptyV2';
-import ReceptInfo from './ReceptyV2/ReceptInfo';
-import MainIndex from './mainIndex';
-import ExpenseTrackerApp from './ExpenseTracker/ExpenseTrackerApp';
-import IsometricCSS from './IsometricCSS/IsometricCSS';
 import CovidApp from './Covid/CovidApp';
+// const CovidApp = React.lazy(() => import('./Covid/CovidApp'));
+
 import CovidSK from './Covid/CovidSK';
+import GrafyKrajina from './Covid/GrafyKrajina';
+// const CovidSK = React.lazy(() => import('./Covid/CovidSK'));
+
+// import CovidApp from './Covid/CovidApp';
+// import CovidSK from './Covid/CovidSK';
+// import TodoApp from './Todo/TodoApp';
+// import { polyfill } from 'es6-promise'; polyfill();
+// require('es6-promise').polyfill();
+// require('isomorphic-fetch');
+
 
 function App() {
-
-
   return (
     <Router basename="/">
       <div className="App">
         <Nav />
         <Switch>
-          <Route path="/" component={Home} exact />
-          <Route path="/Currency/CurrencyApp" component={CurrencyApp} />
-          <Route path="/TicTacToe/TicTacToe" component={TicTacToe} />
-          <Route path="/Todo/TodoApp" component={Todo} />
-          <Route path="/Recepty/Recepty" component={Recepty} />
-          <Route path="/ReceptyV2/ReceptyV2" exact component={ReceptyV2} />
-          <Route path="/ReceptyV2/ReceptyV2/:id" component={ReceptInfo} />
-          <Route path="/ExpenseTracker/ExpenseTrackerApp" component={ExpenseTrackerApp} />
-          <Route path="/IsometricCSS/IsometricCSS" component={IsometricCSS} />
-          <Route path="/Covid/CovidApp" component={CovidApp} />
+          <Route path="/" component={CovidApp} exact />
           <Route path="/Covid/CovidSK" component={CovidSK} />
+          <Route path="/Covid/CovidApp" exact component={CovidApp} />
+          <Route path="/Covid/CovidApp/:id" component={GrafyKrajina} />
+          {/* <Route path="/Todo" component={TodoApp} /> */}
         </Switch>
       </div>
     </Router>
   );
 }
 
-const Home = () => (
-  <div>
-    <MainIndex />
-  </div>
-)
+
 
 export default App;

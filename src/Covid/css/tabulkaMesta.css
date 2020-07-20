@@ -1,0 +1,92 @@
+.tabulkaMesta{
+    font-size: 16px;
+    width: 45%;
+    overflow-y: scroll;
+}
+
+.tabulkaMesta table {
+    width: 100%;
+    
+}
+
+
+.tabulkaOkrajDivMain{
+    max-height: 500px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+ .tabulkaMesta table,
+.tabulkaMesta th,
+ .tabulkaMesta td {
+    border: none;
+    border-bottom: 1px solid rgba(148, 148, 148, 0.5);
+}
+
+.tabulkaMesta th {
+    color: rgb(88, 88, 88);
+}
+
+.tabulkaMesta table th {
+    position: sticky;
+    top: -1px;
+    box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0.4);
+    padding-right: 10px;
+    background: white;
+}
+
+.tabulkaMesta table th {
+    position: sticky;
+}
+
+
+.tabulkaMesta table tr:hover {
+    background: rgb(248, 248, 248);
+}
+
+.tabulkaMesta tr{
+    padding: 0px;
+    margin: 0px;
+    line-height: 1;
+} 
+
+.plusPreObecInfected{
+    color: red;
+    font-size: 12px;
+}
+
+.plusPreObecRecovered{
+    color: green;
+    font-size: 15px;
+}
+
+.textPreZObrazenieTabulky{
+    background: white;
+    padding: 5px;
+    width: 300px;
+    align-self: center;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 5px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 5px -4px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 5px -4px rgba(0,0,0,0.75);
+}
+
+.textPreZObrazenieTabulky:hover{
+    cursor: pointer;
+    
+}
+@media (max-width: 1200px){
+    .tabulkaMesta{
+        width: 95%;
+        font-size: 12px;
+    }
+    .plusPreObecRecovered{
+        font-size: 12px;
+    }
+
+}

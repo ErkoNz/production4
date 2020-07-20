@@ -1,0 +1,379 @@
+:root {
+  --sirkaStlpcov: 25px;
+  --fontSizeRed: 12px;
+  --fontSize: 15px;
+}
+
+.svkGraf{
+  position: relative;
+  height: 50vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  border-bottom: 1px solid black;
+  width: 94%;
+  margin-left: 3%;
+  margin-top: 15px;
+  /* justify-content: center; */
+}
+
+.covidApp{
+  padding-bottom: 1px;
+  background: rgba(243, 243, 243, 0.411);
+  min-height: 90vh;
+}
+
+.outsideDivGraf{
+  background: white;
+  border-radius: 10px;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 80px;
+  -webkit-box-shadow: 5px 5px 24px -26px rgba(0,0,0,0.75);
+  -moz-box-shadow: 5px 5px 24px -26px rgba(0,0,0,0.75);
+  box-shadow: 5px 5px 24px -26px rgba(0,0,0,0.75);
+  margin-bottom: 250px;
+  padding-right: 25px;
+  padding-top: 5px;
+  position: relative;
+}
+
+.outsideDivGraf h1{
+  /* margin-top: -30px; */
+  /* color: red; */
+  font-size: 1.5rem;
+  color: rgb(77, 77, 77);
+  margin-bottom: 50px;
+}
+
+
+.stlpcePrvehoGrafu{
+  background-image: linear-gradient(to right, #e0908a 0%, #ff3030 100%);
+  display: flex;
+  align-self: flex-end;
+  width:  var(--sirkaStlpcov);
+  transition:  .4s;
+  position: relative;
+}
+
+.aktivnePripadyGraf{
+  /* background-image: linear-gradient(to right, #e0908a 0%, #ff3030 100%); */
+  /* background-image: linear-gradient(to top, #48c6ef 0%, #6f86d6 100%); */
+  background: linear-gradient(to top, #3497b8 0%, #2e469e 100%);
+  display: flex;
+  align-self: flex-end;
+  width:  var(--sirkaStlpcov);
+  position: relative;
+  /* animation:stlpceFarba 4s linear infinite; */
+  /* background: red; */
+}
+
+/* @keyframes stlpceFarba { 
+   0% { 
+    background: linear-gradient(to top, #3497b8 0%, #2e469e 100%);
+  }  
+   50% { 
+    background: red;
+  }  
+  100% { 
+    background: blue
+  } 
+}  */
+
+/* @keyframes stlpceFarba { 
+  
+  100% { 
+    -webkit-transform: rotate(360deg); transform:rotate(360deg); background: blue; 
+  } 
+}   */
+
+
+.divInGraf{
+  width: 50px;
+  height: 50px;
+  background: green;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+
+/* .stlpcePrvehoGrafu:hover  {
+  display: block;
+  background: red;
+} */
+
+.PozitivneTestyDruhyGraf{
+  background-image: linear-gradient(to right, rgb(236, 145, 139) 0%, #db2222 100%);
+  display: flex;
+  align-self: flex-end;
+  width:  var(--sirkaStlpcov);
+  transition:  .4s;
+  position: relative;
+}
+
+.spanDate{
+  transform: rotate(30deg);
+  white-space: nowrap;
+  text-align: left;
+  position: absolute;
+  bottom: -40px;
+}
+
+.CountPrvehoGrafu{
+  width: 100%;
+  margin-top: -30px;
+  font-size: var(--fontSize);
+}
+
+.CountDruhehoGrafu{
+  width: 100%;
+  font-size: var(--fontSize);
+  margin-top: -30px;
+  z-index: 1;
+}
+
+.SlovenskeUdajeLink{
+  background: white;
+  padding: 5px;
+  width: 250px;
+  align-self: center;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 5px -4px rgba(0,0,0,0.75);
+  -moz-box-shadow: 1px 1px 5px -4px rgba(0,0,0,0.75);
+  box-shadow: 1px 1px 5px -4px rgba(0,0,0,0.75);
+  
+}
+
+.SlovenskeUdajeLink a {
+  color: black;
+  margin-left: -15px;
+  font-size: 20px;
+}
+
+
+
+.iconSlovUdaje{
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 10px;
+  width: 18px;
+  color: rgb(75, 75, 75);
+  transition: .2s ease-in-out;
+  position: absolute;
+
+}
+
+.SlovenskeUdajeLink:hover .iconSlovUdaje{
+  margin-left: 15px;
+}
+
+.countupFirstRed{
+  color: red;
+  position: absolute;
+  margin-top: -16px;
+  font-size: var(--fontSizeRed);
+  width: 100%;
+}
+
+/* .countup2{
+  margin-top: -20px;
+} */
+
+/* .countupX2{
+  margin-top: -30px;
+  z-index: 1;
+} */
+
+
+
+.druhyGrafJedenTypSltpca{
+  margin-top: -22px;
+}
+
+.Graf2Stlpce{
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  display: flex;
+  align-self: flex-end;
+  width:  var(--sirkaStlpcov);
+  transition:  .4s;
+  margin-left: calc(var(--sirkaStlpcov) * -1);
+}
+
+
+.vysvetlivkyPodGrafom{
+  margin-top: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.vysvetlivkyPodGrafom .blue {
+  width: 25px;
+  height: 15px;
+  background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%);
+  margin-right: 10px;
+  margin-bottom: -2px;
+}
+
+.vysvetlivkyPodGrafom .red {
+  width: 25px;
+  height: 15px;
+  background-image: linear-gradient(to right, #d66f68c5 0%, #ff0000d0 100%);
+  margin-bottom: -2px;
+
+}
+
+.vysvetlivkyPodGrafom div {
+  display: inline-block;
+  margin: 10px;
+}
+
+.medzeraPodDatumomGraf1{
+  width: .1px;
+  height: .1px;
+  margin-top: 70px;
+}
+
+.nakazeniZaDen {
+  margin-left: -20px;
+  font-size: var(--fontSizeRed);
+  color: Red;
+  margin-top: -16px;
+}
+
+.test{
+  position: absolute;
+  width: 2%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  transition: .3s;
+  z-index: 1;
+  margin-left: 5px;
+}
+
+.wideArrow{
+  position:relative; 
+  top: 40%;
+  transform: translateY(-50%);
+}
+
+.wideArrow img {
+  width: 30px;
+}
+
+@media only screen and (max-width: 870px) {
+  :root {
+    /* --sirkaStlpcov: 4px; */
+    --sirkaStlpcov: 4px;
+    --fontSizeRed: 4px;
+    --fontSize: 5px;
+    --fontSizeDruhyGraf: 5px;
+  }
+
+
+  .test{
+    margin-left: 6px;
+  }
+  
+  .wideArrow{
+    top: 40%;
+    transform: translateY(-50%);
+  }
+
+  .outsideDivGraf h1{
+    font-size: .6rem;
+    margin-bottom: 20px;
+  }
+  
+  .wideArrow img {
+    width: 10px;
+  }
+
+  .druhyGrafJedenTypSltpca{
+    margin-top: -8px !important;
+  }
+
+  .medzeraPodDatumomGraf1{
+    margin-top: 30px;
+  }
+
+  .spanDate{
+    transform: rotate(45deg);
+    white-space: nowrap;
+    text-align: left;
+    position: absolute;
+    bottom: -13px;
+    font-size: var(--fontSizeRed);
+    margin-left: -1px;
+  }
+
+  .countupFirstRed{
+    margin-top: -5.5px;
+  }
+
+  .CountPrvehoGrafu{
+    margin-top: -11px;
+  }
+
+  .CountDruhehoGrafu{
+    margin-top: -12px;
+    font-size: var(--fontSizeDruhyGraf);
+    margin-left: -1px;
+  }
+
+  .graf2{
+    margin-top: -12px;
+  }
+
+  .nakazeniZaDen {
+    margin-left: -5px;
+    font-size: 5px;
+    color: Red;
+    margin-top: -7px;
+  }
+
+  .vysvetlivkyPodGrafom{
+    margin-top: 20px;
+    font-size: 8px;
+  }
+  
+  .vysvetlivkyPodGrafom .blue {
+    width: 10px;
+    height: 7px;
+    margin: 0 3px -1px 0;
+  }
+  
+  .vysvetlivkyPodGrafom .red {
+    width: 10px;
+    height: 7px;
+    margin: 0 3px -1px 0;
+  }
+
+  .outsideDivGraf{
+    padding: 0;
+    margin: 0;
+    width: 95%;
+    margin-left: 0px;
+    padding-top: 1px;
+    margin: 5px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    position: relative;
+    margin-top: 50px;
+  }
+
+  .svkGraf{
+    position: relative;
+    height: 30vh;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    border-bottom: 1px solid black;
+    width: 94%;
+    margin-left: 4%;
+  }
+}

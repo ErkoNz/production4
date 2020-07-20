@@ -2,35 +2,28 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     min-height: 50vh;
-    font-size: 1.5rem;
+    /* font-size: 1.5rem; */
     margin: 50px 0 50px 0;
     transition: 0.4s;
-
-
 }
 
 .todo{
-    /* background-image: linear-gradient(to top, #30cfd0 0%, #3817b3 100%); */
     background-image: linear-gradient(to bottom, #f5f7fa 0%, #5297ff21 100%);
     box-shadow: 6px 6px 29px -16px rgba(0,0,0,0.76);
     padding: 3px 10px;
     margin-bottom: 6px;
     border-radius: 3px;
-    justify-content: space-between;
-    margin-left: 34%;
-    margin-right: 34%;
+    /* justify-content: space-between; */
+    /* margin-left: 34%;
+    margin-right: 34%; */
     border-radius:10px;
     transition: 0.2s;
+    width: 40%;
 }
 
-@media only screen and (max-width: 1100px) {
-    .todo {
-      margin: 0;
-      width: 70%;
-      margin-left: 15%;
-    }
-  }
+
 
 .todo:hover{
     box-shadow: 6px 6px 29px -9px rgba(0, 0, 0, 0.46);
@@ -50,32 +43,81 @@
     border-radius: 5px  ;
     background-color: white;
     margin-top: 5px;
-    border:1px solid rgb(168, 168, 168);
+    border:1px solid rgb(184, 184, 184);
     word-wrap: break-word;
-    padding-right: 40px;
     text-align: left;
+    font-size: 18px;
+    /* background: red; */
+    padding: 5px 0 5px 0;
+    padding-right: 40px;
 }
+
 
 .inputTodo{
     border: none;
     border-radius: 5px;
-    width: calc(100% - 20px);
-    margin-top: 7px;
-    height: 2.4em;
     font-size: 1rem;
     outline: none;
+    padding-left: 10px;
+    width: calc(100% - 10px );
+    height: 35px;
+    margin: 15px 5px 5px 0px;
+    /* background: red; */
+  }
+
+
+  .datePicker{
+    border: none;
+    height: 35px;
+    width: 200px;
     padding-left: 20px;
-    margin-bottom: 10px;
+    width: calc(100% - 20px);
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 20px;
 
   }
 
+  .react-datepicker-wrapper, .react-datepicker__input-container {
+    width: 100%;
+    margin-right: 20px !important;
+  }
+
+  /* .example-custom-input{
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 60px;
+  } */
+  
+  .divForDatePicker{
+    position: relative;
+  }
+
+  
+  /* .datePicker{
+    border: none;
+    background: green;
+    /* border-radius: 5px; 
+    font-size: 1rem;
+    outline: none;
+    /* padding-left: 10px; 
+    height: 30px;
+  } */
+
+ 
+.musisVyplnitObePolia{
+  color: red;
+  font-size: 16px;
+  margin-top: -5px;
+}
 .naLavo{
     float: left;
-    font-size: 11px;
-    color: gray;
+    font-size: 14px;
+    color: rgb(134, 134, 134);
     margin: 8px;
-    text-align: left;
-    /* margin-left: -90px; */
+    /* text-align: left; */
+    font-weight: bold;
+    margin-top: 5px;
 }
 
 
@@ -88,7 +130,6 @@
     font-size: 20px;
     outline: none;
     transition: .3s;
-
   }
 
   .btn1{
@@ -97,13 +138,11 @@
       font-weight: bold;
   }
 
-  .btn:active {
-    background-color: rgba(149, 149, 149, 0.466);
-  }
 
   .btn:hover {
-    transform: scale(.97);
-  }
+    transform: scale(.98);
+    cursor: pointer;
+  } 
 
   .btnDel{
       color: Red;
@@ -119,3 +158,34 @@
   .splnene{
       color: green;
   }
+
+
+
+  @media only screen and (max-width: 1300px) {
+    .todo {
+      width: 70%;
+    }
+   
+  }
+
+  @media only screen and (max-width: 870px) {
+    .todo {
+      width: 90%;
+    }
+    .todoList{
+      font-size: 14px;
+    }
+
+    .naLavo{
+      font-size: 10px;
+      margin-top: 3px;
+    }
+
+    
+  .btn{
+    height: 30px;
+    font-size: 15px;
+  }
+  }
+
+

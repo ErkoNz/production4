@@ -1,0 +1,363 @@
+
+.cardsDiv{
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.cards {
+    width: 30%;
+    min-height: 150px;
+    position: relative; 
+    border-radius: 6px;
+    border:1px solid rgba(184, 184, 184, 0.692);
+    margin-bottom: 30px;
+    background: white;
+    padding-top: .4px;
+}
+
+.cardsSVK {
+    width: 40%;
+}
+
+.circle{
+    background: rgb(126, 0, 0);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* animation:spin 4s linear infinite; */
+}
+
+.obrDiv{
+    position: absolute;
+    height: 52px;
+    padding-left: 7px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.textCard{
+    border-top-right-radius:5px;
+    border-top-left-radius:5px;
+    color: rgb(73, 73, 73);
+    font-size: 1.1rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(236, 236, 236);
+    border-bottom:1px solid rgba(184, 184, 184, 0.692);
+}
+
+.topCard{
+    display: flex;
+    align-items: center;
+    height: 53px;
+}
+
+.mainText{
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    font-size: 2.7rem;
+    font-weight: bold;
+    color: rgba(68, 68, 68, 0.829);
+    flex-direction: column;
+    letter-spacing: 2px;
+}
+
+.mainTextSK{
+    /* min-height: 60px; */
+    /* display: flex; */
+    /* justify-content: center; */
+    font-size: 1rem;
+    color: rgba(68, 68, 68, 0.829);
+    /* flex-direction: column; */
+    letter-spacing: .1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.mainTextSK span {
+    font-size: 17px;
+    font-weight: bold;
+}
+.mainTextSK span:nth-child(1) {
+    color: rgba(0, 3, 163, 0.685);
+}
+.mainTextSK span:nth-child(3) {
+    color: rgba(45, 170, 45, 0.815);
+}
+.mainTextSK span:nth-child(5) {
+    color: #ff6565e0;
+    
+}
+
+.HP{
+    font-size: 2rem;
+    background: white;
+}
+
+.skull{
+    background: rgb(42, 42, 42);
+    font-size: 22px;
+}
+
+
+.spanJustHoverPointer:hover{
+cursor: pointer;
+}
+
+
+.aktiveNakazenych{
+    font-size:14px;
+    font-weight: normal;
+    letter-spacing: 0px;
+}
+
+.aktiveNakazenych span{
+    font-size: 12px;
+}
+
+.circle img {
+    width: 90%;
+}
+
+
+.NacitatViacDniDoGrafov{
+    background: white;
+    padding: 5px;
+    align-self: center;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    -webkit-box-shadow: 1px 1px 5px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 1px 5px -4px rgba(0,0,0,0.75);
+    box-shadow: 1px 1px 5px -4px rgba(0,0,0,0.75);
+    margin-bottom: 25px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.NacitatViacDniDoGrafov:hover {
+    font-size: 17px;
+}
+
+
+
+
+table, th, td {
+    border: 1px solid rgb(199, 199, 199);
+    border-collapse: collapse;
+    padding: 7px;
+    text-align: left;
+   
+}
+tr {
+    background: white;
+}
+tr:hover{
+    background:rgba(173, 173, 173, 0.068);
+}
+
+.divTable table th {
+    color: rgb(85, 85, 85);
+    /* position: sticky; */
+    top: -1px;
+    background: white;
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.4);
+    padding-right: 25px;
+}
+
+table th:hover{
+    cursor: pointer;
+}
+
+.divTable{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    font-size: 18px;
+    overflow-y: auto;
+    min-width: 200px;
+    margin-bottom: 150px;
+    transition: .9s;
+    animation: .9s;
+}
+
+.firstCase{
+    margin-top: -5px;
+    margin-bottom: -5px;
+    color: rgb(83, 83, 83);
+    font-size: 13px;
+    white-space: nowrap;
+
+}
+
+.firstCaseNumber{
+    display: inline;
+}
+
+.KrajinaLink{
+    font-weight: bold;
+    color: #385898;
+    font-size: 18px;
+}
+
+.KrajinaLink:hover {
+    text-decoration: underline;
+}
+
+.sortIcon{
+    color: grey;
+    margin-top: 3px;
+    margin-left: 3px;
+    margin-right: 20px;
+    position: absolute;
+}
+
+#myInput {
+    width: 250px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.inputSearch{
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid rgb(202, 202, 202);
+}
+
+
+
+.divTable table .zrolovaneKontinenty .firstCase, .divTable table .zrolovaneKontinenty td{
+    background: rgb(230, 230, 230) ;
+}
+
+.divTable table .zrolovaneKontinenty td:nth-child(4){
+    background: rgba(254, 255, 194, .8);
+}
+
+
+
+@media only screen and (max-width: 800px) {
+    .cardsDiv{
+        flex-direction: column;
+    }
+
+    .cards {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .cardsDiv{
+        margin-left: 0%;
+        margin-right: 0%;
+        padding: 30px;
+    }
+
+    .textCard{
+        font-size: 1rem;
+        padding-left: 10px;
+    }
+
+    td:not(:first-child) {
+        white-space: nowrap;
+    }
+
+    .kontinenty{
+        font-size: 10px;
+    }
+}
+
+@media screen and  (max-width: 720px) {
+
+
+ 
+
+    .NacitatViacDniDoGrafov{
+        font-size: 14px;
+    }
+    
+    .NacitatViacDniDoGrafov:hover {
+        font-size: 14px;
+    }
+
+    
+
+
+    .divTable table th {
+        top: -1px;
+        font-size: 9.5px;  
+        padding-right: 5px;
+    }
+
+    .KrajinaLink{
+        font-size: 9.5px;
+    }
+
+    .divTable table td {
+        font-size: 10.5px ;
+        margin: 1px;
+        overflow: auto;
+    }
+
+    .divTable table .zrolovaneKontinenty .firstCase, .divTable table .zrolovaneKontinenty td{
+        font-size: 9.5px;
+    }
+
+    .firstCase::before{
+        content: '';
+    }
+
+    table, th, td {
+        padding: 4px 2px 4px 2px;
+    }
+   
+     table th {
+        padding-right: 1px;
+    }
+
+    .firstCase{
+        margin-top: -1px;
+        margin-bottom: -2px;
+        font-size: 9px;
+        line-height: 1;
+        white-space: pre-wrap;
+        color: rgb(141, 141, 141);
+    }
+
+    .sortIcon{
+        margin-top: 3px;
+        margin-left: 3px;
+        margin-right: 5px;
+        position: relative;
+    }
+
+    .firstCase{
+        white-space: nowrap;
+    }
+    
+    .firstCaseNumber{
+        display: block;
+    }
+}
+
+@media screen and  (max-width: 520px) {
+    table, th, td {
+        margin-left: auto;
+    }
+}

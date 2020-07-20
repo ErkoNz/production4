@@ -1,0 +1,219 @@
+.gridDiv{
+    display: grid;
+    grid-gap: 3%;
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: auto auto auto; */
+    /* background-color: #2196F3; */
+    width: 62%;
+    margin-left: 19%;
+    /* grid-auto-rows: 1fr; */
+}
+
+.gridDiv .gridKarta {
+    background-color: white;
+    border-radius: 6px;
+    border:1px solid rgba(184, 184, 184, 0.692);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    /* min-height: 100px; */
+    position: relative;
+    padding: 0;
+}
+
+.gridDiv .gridKarta .gridTop {
+    border-top-right-radius:5px;
+    border-top-left-radius:5px;
+    color: rgb(73, 73, 73);
+    font-size: 1.1rem;
+    background: rgb(240, 240, 240);
+    border-bottom:1px solid rgba(184, 184, 184, 0.692);
+    padding: 10px 0 10px 0;
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .gridDiv{
+        width: 90%;
+        margin-left: 5%;
+
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .gridDiv{
+        grid-template-columns: repeat(1, 1fr);
+        width: 84%;
+        margin-left: 8%;
+
+    }
+}
+
+
+
+
+
+
+
+/* 
+.cardsDiv{
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.cards {
+    width: 30%;
+    min-height: 150px;
+    position: relative; 
+    border-radius: 6px;
+    border:1px solid rgba(184, 184, 184, 0.692);
+    margin-bottom: 30px;
+    background: white;
+    padding-top: .4px;
+}
+
+.cardsSVK {
+    width: 40%;
+}
+
+.circle{
+    background: rgb(126, 0, 0);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation:spin 4s linear infinite;
+}
+
+.obrDiv{
+    position: absolute;
+    height: 52px;
+    padding-left: 7px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.textCard{
+    border-top-right-radius:5px;
+    border-top-left-radius:5px;
+    color: rgb(73, 73, 73);
+    font-size: 1.1rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(236, 236, 236);
+    border-bottom:1px solid rgba(184, 184, 184, 0.692);
+}
+
+.topCard{
+    display: flex;
+    align-items: center;
+    height: 53px;
+}
+
+.mainText{
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    font-size: 2.7rem;
+    font-weight: bold;
+    color: rgba(68, 68, 68, 0.829);
+    flex-direction: column;
+    letter-spacing: 2px;
+}
+
+.mainTextSK{
+    /* min-height: 60px; */
+    /* display: flex; */
+    /* justify-content: center; 
+    font-size: 1rem;
+    color: rgba(68, 68, 68, 0.829);
+    /* flex-direction: column; 
+    letter-spacing: .1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.mainTextSK span {
+    font-size: 17px;
+    font-weight: bold;
+}
+.mainTextSK span:nth-child(1) {
+    color: rgba(0, 3, 163, 0.685);
+}
+.mainTextSK span:nth-child(3) {
+    color: rgba(45, 170, 45, 0.815);
+}
+.mainTextSK span:nth-child(5) {
+    color: #ff6565e0;
+    
+}
+
+.HP{
+    font-size: 2rem;
+    background: white;
+}
+
+.skull{
+    background: rgb(42, 42, 42);
+    font-size: 22px;
+}
+
+
+.aktiveNakazenych{
+    font-size:14px;
+    font-weight: normal;
+    letter-spacing: 0px;
+}
+
+.aktiveNakazenych span{
+    font-size: 12px;
+}
+
+.circle img {
+    width: 90%;
+}
+@media only screen and (max-width: 800px) {
+    .cardsDiv{
+        flex-direction: column;
+    }
+
+    .cards {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 1200px) {
+    .cardsDiv{
+        margin-left: 0%;
+        margin-right: 0%;
+        padding: 30px;
+    }
+
+    .textCard{
+        font-size: 1rem;
+        padding-left: 10px;
+    }
+
+    td:not(:first-child) {
+        white-space: nowrap;
+    }
+
+    .kontinenty{
+        font-size: 10px;
+        /* color: red; 
+    }
+} 
+
+*/
