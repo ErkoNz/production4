@@ -30,7 +30,6 @@ function CovidSK() {
     })
 
     useEffect(() => {
-
         const LoadData = async () => {
             const response = await fetch(svk)
             const data = await response.json()
@@ -53,7 +52,6 @@ function CovidSK() {
         }
 
         LoadData()
-
 
     }, [])
 

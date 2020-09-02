@@ -48,7 +48,7 @@ function CompareCislo(data, sorting, stlpec) {
         function compareNum(b, a) {
             const A = a.amount.recovered
             const B = b.amount.recovered
-            if (sorting) {
+            if (!sorting) {
                 if (A > B) {
                     return 1
                 } else if (A < B) {
@@ -112,7 +112,7 @@ function CompareCislo(data, sorting, stlpec) {
             function compareNum(a, b) {
                 const A = a.amount.infected_delta
                 const B = b.amount.infected_delta
-                if (sorting) {
+                if (!sorting) {
                     if (A > B) {
                         return 1
                     } else if (A < B) {
@@ -133,7 +133,7 @@ function CompareCislo(data, sorting, stlpec) {
             function compareNum(a, b) {
                 const A = a.amount.infected
                 const B = b.amount.infected
-                if (sorting) {
+                if (!sorting) {
                     if (A > B) {
                         return 1
                     } else if (A < B) {
@@ -155,7 +155,7 @@ function CompareCislo(data, sorting, stlpec) {
             function compareNum(a, b) {
                 const A = a.amount.infected
                 const B = b.amount.infected
-                if (sorting) {
+                if (!sorting) {
                     if (A > B) {
                         return 1
                     } else if (A < B) {

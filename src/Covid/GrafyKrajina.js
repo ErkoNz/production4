@@ -1,14 +1,25 @@
 import React, { useState, useEffect } from 'react'
 import BarGraf from './BarGraf';
 import DougnatChart from './DougnatChart';
+import GetLastData from './components/GetLastData';
 
-function GrafyKrajina({ match }) {
+const LOCAL_STORAGE_LASTDAY = "lastdayStorage"
 
+function GrafyKrajina(props) {
+    // console.log(props.location.state)
+    const match = props.match
     const [dataforChart, setDataforChart] = useState()
+    const [LastDayData, setLastDayData] = useState()
+
     const [loadMoreData, setLoadMoreData] = useState({
         text: 'Zobraziť viac dni',
         bool: false
     })
+
+    useEffect(() => {
+        if (!(match.params.id === "Svet"))
+            GetLastData(props, LOCAL_STORAGE_LASTDAY, setLastDayData)
+    }, [props])
 
     useEffect(() => {
         const fetchData = async () => {
@@ -64,17 +75,30 @@ function GrafyKrajina({ match }) {
                 return dailyCases
             })
 
-            // console.log(dailyCases)
-
-
-
-            // console.log(dailyCases)
             valuesCases = valuesCases.filter(jedno => jedno !== 0);
             valueRecovered = valueRecovered.splice(-valuesCases.length)
             valueDeaths = valueDeaths.splice(-valuesCases.length)
             datumy = datumy.splice(-valuesCases.length)
             dailyCases = dailyCases.slice(-valuesCases.length)
             valueActiveCases = valueActiveCases.slice(-valuesCases.length)
+
+
+
+
+
+            if (LastDayData) {
+                let pom = Object.keys(data1.timeline.cases)[Object.keys(data1.timeline.cases).length - 1]
+                var d = new Date(pom);
+                d.setDate(d.getDate() + 1)
+                var lastDataDatum = d.getDate() + ". " + (d.getMonth() + 1) + ". " + d.getFullYear()
+                valuesCases.push(LastDayData.cases)
+                dailyCases.push(LastDayData.todayCases)
+                valueDeaths.push(LastDayData.deaths)
+                datumy.push(lastDataDatum)
+                valueRecovered.push(LastDayData.recovered)
+                valueActiveCases.push(LastDayData.active)
+            }
+
             setDataforChart(
                 {
                     nacitatViacUdajov: loadMoreData.bool,
@@ -138,11 +162,12 @@ function GrafyKrajina({ match }) {
 
                 }
             )
-
         }
+
         fetchData()
 
-    }, [loadMoreData])
+    }, [loadMoreData, match.params.id, LastDayData])
+    // }, [loadMoreData])
 
 
     const ZmenitLoadMoreData = () => {
@@ -162,7 +187,7 @@ function GrafyKrajina({ match }) {
     return (
         dataforChart ?
             <div className="testingGrafy">
-                {console.log("graffyyyy")}
+                {/* {console.log("graffyyyy")} */}
 
                 {match.params.id === "Svet" ?
                     <h1>Covid-19 vo svete</h1>

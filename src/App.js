@@ -28,7 +28,6 @@ function App() {
           <Route path="/Covid/CovidSK" component={CovidSK} />
           <Route path="/Covid/CovidApp" exact component={CovidApp} />
           <Route path="/Covid/CovidApp/:id" component={GrafyKrajina} />
-          {/* <Route path="/Todo" component={TodoApp} /> */}
         </Switch>
       </div>
     </Router>

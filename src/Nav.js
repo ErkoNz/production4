@@ -23,7 +23,6 @@ function Nav() {
     const PocPripadov = () => {
         if (state) {
             let sklnovaniePripadov = "prípadov"
-            console.log(state.infected)
             if (state.day === 1)
                 sklnovaniePripadov = "prípad"
             else if (state.infected > 1 && state.infected < 5)

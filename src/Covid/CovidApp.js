@@ -25,32 +25,6 @@ function CovidApp() {
 
 
     useEffect(() => {
-
-        // axios.get(`https://disease.sh/v2/all`)
-        //     .then(res => {
-        //         setDoughnatData([res.data.cases, res.data.recovered, res.data.deaths])
-        //         setMainData([res.data])
-        //     })
-
-        // axios.get(`https://disease.sh/v2/countries`)
-        //     .then(res => {
-        //         setCountriesData(res.data)
-        //         setState({
-        //             data: res.data.sort((a, b) => (
-        //                 state.direction['cases'] === 'asc'
-        //                     ? parseFloat(a['cases']) - parseFloat(b['cases'])
-        //                     : parseFloat(b['cases']) - parseFloat(a['cases'])
-        //             )),
-        //             direction: {
-        //                 'cases': state.direction['cases'] === 'asc'
-        //                     ? 'desc'
-        //                     : 'asc'
-        //             }
-        //         })
-        //     })
-        // HandleLoadData2()
-        // HandleLoadData1()
-
         const fetchData = async () => {
             const response1 = await fetch('https://disease.sh/v2/all')
             let data1 = await response1.json()
@@ -75,41 +49,6 @@ function CovidApp() {
         }
         fetchData()
     }, [])
-
-
-    // const HandleLoadData1 = async () => {
-    //     const response1 = await fetch('https://disease.sh/v2/all')
-    //     let data1 = await response1.json()
-    //     setDoughnatData([data1.cases, data1.recovered, data1.deaths])
-    //     setMainData([data1])
-    // }
-
-    // const HandleLoadData2 = async () => {
-    //     const response = await fetch('https://disease.sh/v2/countries')
-    //     let data = await response.json()
-    //     setCountriesData(data)
-
-    //     setState({
-    //         data: data.sort((a, b) => (
-    //             state.direction['cases'] === 'asc'
-    //                 ? parseFloat(a['cases']) - parseFloat(b['cases'])
-    //                 : parseFloat(b['cases']) - parseFloat(a['cases'])
-    //         )),
-    //         direction: {
-    //             'cases': state.direction['cases'] === 'asc'
-    //                 ? 'desc'
-    //                 : 'asc'
-    //         }
-    //     })
-    // }
-
-    // function FormatNum(num) {
-    //     if (num) {
-    //         return (
-    //             num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ")
-    //         )
-    //     }
-    // }
 
     function numberTrans3(a, b) {
         if (a) {
@@ -150,7 +89,6 @@ function CovidApp() {
             || state.direction['recovered']
             || state.direction['todayDeaths']) ?
             <div className="covidApp">
-                {console.log("CovidApp")}
                 {
                     mainData ?
                         <div className="cardsDiv">
@@ -216,6 +154,7 @@ function CovidApp() {
                 <div className="SlovenskeUdajeLink" >
                     <Link to={`/Covid/CovidApp/Svet`} >Grafy pre celý svet <AiOutlineDoubleRight className="iconSlovUdaje" />
                     </Link>
+
                 </div>
                 {/* <Link to={`/Covid/CovidApp/${item.country}`} > */}
 

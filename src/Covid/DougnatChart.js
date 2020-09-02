@@ -40,7 +40,7 @@ function DougnatChart(props) {
     return (
         props && data ?
             <div>
-                {console.log("DougnatChart")}
+                {/* {console.log("DougnatChart")} */}
                 <div className="dougnut">
                     <Doughnut
                         data={data}

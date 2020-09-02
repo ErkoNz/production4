@@ -1,4 +1,4 @@
-import React, { useState, useReducer } from 'react'
+import React, { useState, useReducer, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { FaSortAmountDown } from 'react-icons/fa';
 import PrvyRiadokTabulky from './PrvyRiadokTabulky';
@@ -10,6 +10,7 @@ function SvetTabulka(props) {
     const [ikonka, setIkonka] = useState('cases')
     const [kontinent, setKontinent] = useState("Svet")
     const [scrollPerformance, setScrollPerformance] = useState(false)
+    const [LastDayData, setLastDayData] = useState()
     const [style4Buttons, setStyle4Buttons] = useState({
         Svet: { background: '#e5e5e5', boxShadow: 'inset 0px 0px 5px #c1c1c1' },
         Europe: null,
@@ -39,8 +40,25 @@ function SvetTabulka(props) {
         // fontWeight: 'bold'
         // color: 'white'
     }
+    // const [dispatch] = useReducer(reducer, 1);
     const [state, dispatch] = useReducer(reducer, 1);
 
+    useEffect(() => {
+        const allowed = ["country", "active", "todayCases", "cases", "deaths", "recovered"]
+        let pom = []
+        props.countriesData.map((udaj, id) => {
+            Object.keys(udaj)
+                .filter(key => allowed.includes(key))
+                .reduce((obj, key) => {
+                    obj[key] = udaj[key];
+                    pom[id] = obj
+                    return obj;
+
+                }, {})
+            return null
+        })
+        setLastDayData(pom)
+    }, [props.countriesData])
 
     function reducer(state, action) {
         switch (action.type) {
@@ -104,15 +122,6 @@ function SvetTabulka(props) {
         transform: "rotateX(180deg)",
     }
 
-    // useEffect(() => {
-    //     axios.get(`https://disease.sh/v2/continents`)
-    //         .then(res => {
-    //             setDataKontinenty([res.data])
-    //             // console.log(res.data)
-    //         })
-    // }, [])
-
-
     const myFunction = () => {
         var input, filter, table, tr, td, i, txtValue;
         input = document.getElementById("myInput");
@@ -146,17 +155,16 @@ function SvetTabulka(props) {
             return ({ background: 'rgb(190, 245, 204)' })
     }
 
-    // function Testing2(pom) {
-    //     setKontinent(prevKontinent => { return pom })
-
-
-    //     // });
-    // }
-
+    function LastDataFunction(propCountry) {
+        if (LastDayData)
+            return LastDayData.filter(function (e) {
+                return e.country === propCountry
+            })
+    }
     return (
         ikonka && kontinent && props ?
             <>
-                {console.log("svetTabulka")}
+                {/* {console.log("svetTabulka")} */}
                 <input type="text" id="myInput" onKeyUp={myFunction} placeholder="Hľadať.." className="inputSearch" />
                 <div className="kontinenty">
                     <button onClick={() => dispatch({ type: 'Svet' })} style={style4Buttons.Svet}>
@@ -270,21 +278,19 @@ function SvetTabulka(props) {
                             </tr>
                         </thead>
                         <tbody>
-                            {console.log("tbodyyyy")}
-
                             <PrvyRiadokTabulky kontinent={kontinent} mainData={props.mainData} />
-
                             {kontinent === "Svet" ?
                                 <>
                                     {props.countriesData.map((item, id) => (
                                         scrollPerformance || id < 20 ?
                                             <tr className="scrollingSvet" key={id} style={greenBackgroundforTR(item.active)}>
                                                 <td style={{ width: '100px' }}>
-                                                    <Link to={`/Covid/CovidApp/${item.country}`} >
-
+                                                    <Link to={{
+                                                        state: LastDataFunction(item.country), pathname: `/Covid/CovidApp/${item.country}`
+                                                    }}>
+                                                        {/* <Link to={`/Covid/CovidApp/${item.country}`
+                                                    }> */}
                                                         <span className="KrajinaLink" >{item.country}</span>
-                                                        {/* <Link to={`/Covid/GrafyKrajina/${item.country}`}>{item.country}</Link> */}
-                                                        {/*<Link to='/Covid/CovidSK'>Slovenské údaje </Link> */}
 
                                                         {item.tests > 0 ?
                                                             <div className="firstCase">
@@ -326,14 +332,13 @@ function SvetTabulka(props) {
                                                 || item.country === "Ukraine" ?
 
                                                 <tr className="scrollingSvet" key={id} style={greenBackgroundforTR(item.active)}>
-                                                    {console.log(item.country)}
+                                                    {/* {console.log(item.country)} */}
 
                                                     <td style={{ width: '100px' }}>
-                                                        <Link to={`/Covid/CovidApp/${item.country}`} >
-
+                                                        <Link to={{
+                                                            state: LastDataFunction(item.country), pathname: `/Covid/CovidApp/${item.country}`
+                                                        }}>
                                                             <span className="KrajinaLink" >{item.country}</span>
-                                                            {/* <Link to={`/Covid/GrafyKrajina/${item.country}`}>{item.country}</Link> */}
-                                                            {/*<Link to='/Covid/CovidSK'>Slovenské údaje </Link> */}
 
                                                             {item.tests > 0 ?
                                                                 <div className="firstCase">
@@ -368,14 +373,15 @@ function SvetTabulka(props) {
                                     props.countriesData.map((item, id) => (
                                         item.continent === kontinent ?
                                             <tr key={id} style={greenBackgroundforTR(item.active)}>
-                                                {/* {console.log(item)} */}
                                                 <td style={{ width: '100px' }}>
-                                                    <Link to={`/Covid/CovidApp/${item.country}`} >
+                                                    {/* <Link to={`/Covid/CovidApp/${item.country}`} > */}
+
+                                                    <Link to={{
+                                                        state: LastDataFunction(item.country), pathname: `/Covid/CovidApp/${item.country}`
+                                                    }}>
+
 
                                                         <span className="KrajinaLink" >{item.country}</span>
-                                                        {/* <Link to={`/Covid/GrafyKrajina/${item.country}`}>{item.country}</Link> */}
-                                                        {/*<Link to='/Covid/CovidSK'>Slovenské údaje </Link> */}
-
                                                         {item.tests > 0 ?
                                                             <div className="firstCase">
                                                                 <div className="firstCaseNumber">
@@ -402,85 +408,6 @@ function SvetTabulka(props) {
                                             : null
                                     ))
                             }
-
-
-
-
-
-
-
-
-
-                            {/* {
-                        props.countriesData.map((item, id) => (
-                            <>
-                                {item.continent === kontinent ?
-                            <tr key={id} style={greenBackgroundforTR(item.active)}>
-                                <td style={{ width: '100px' }}>
-                                    {item.country === 'Slovakia' ?
-                                        <div style={{ fontWeight: 'bold', textDecoration: 'underline' }}>
-                                            <Link to='/Covid/CovidSK'>{item.country}</Link>
-                                        </div>
-                                        : item.country
-                                    }
-                                    {item.tests > 0 ?
-                                        <div className="firstCase">Počet testov:
-                                                    <div className="firstCaseNumber">
-                                                <FormatNumber prop={item.tests} />
-                                            </div>
-                                        </div>
-                                        : null}
-                                </td>
-                                <td><FormatNumber prop={item.cases} /></td>
-                                <td>{item.active ? <FormatNumber prop={item.active} /> : "0"}</td>
-                                {item.todayCases > 0 ?
-                                    <td style={{ background: ' rgb(254, 255, 194)' }}>+<FormatNumber prop={item.todayCases} /> </td>
-                                    : <td></td>
-                                }
-                                <td><FormatNumber prop={item.deaths} /></td>
-                                {item.todayDeaths > 0 ?
-                                    <td style={{ color: ' rgba(156, 20, 20, 0.849)', fontWeight: 'bold' }}>+<FormatNumber prop={item.todayDeaths} /> </td>
-                                    : <td></td>
-                                }
-                                <td style={{ fontWeight: 'bold', color: 'green' }}><FormatNumber prop={item.recovered} /></td>
-                            </tr>
-                                    :
-                                    kontinent === "Svet" ?
-                            <tr key={id} style={greenBackgroundforTR(item.active)}>
-                                <td style={{ width: '100px' }}>
-                                    {item.country === 'Slovakia' ?
-                                        <div style={{ fontWeight: 'bold', textDecoration: 'underline' }}>
-                                            <Link to='/Covid/CovidSK'>{item.country}</Link>
-                                        </div>
-                                        : item.country
-                                    }
-                                    {item.tests > 0 ?
-                                        <div className="firstCase">Počet testov:
-                                                    <div className="firstCaseNumber">
-                                                <FormatNumber prop={item.tests} />
-                                            </div>
-                                        </div>
-                                        : null}
-                                </td>
-
-                                <td><FormatNumber prop={item.cases} /></td>
-                                <td>{item.active ? <FormatNumber prop={item.active} /> : "0"}</td>
-
-                                {item.todayCases > 0 ?
-                                    <td style={{ background: ' rgb(254, 255, 194)' }}>+<FormatNumber prop={item.todayCases} /> </td>
-                                    : <td></td>
-                                }
-                                <td><FormatNumber prop={item.deaths} /></td>
-                                {item.todayDeaths > 0 ?
-                                    <td style={{ color: ' rgba(156, 20, 20, 0.849)', fontWeight: 'bold' }}>+<FormatNumber prop={item.todayDeaths} /> </td>
-                                    : <td></td>
-                                }
-                                <td style={{ fontWeight: 'bold', color: 'green' }}><FormatNumber prop={item.recovered} /></td>
-                            </tr>
-                            : null
-                                }
-                            </>
-                        ))} */}
                         </tbody>
                     </table>
                     <label htmlFor="myInput">.</label>

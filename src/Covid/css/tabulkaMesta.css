@@ -16,6 +16,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border:2px solid green;
 }
 
 
@@ -28,6 +29,7 @@
 
 .tabulkaMesta th {
     color: rgb(88, 88, 88);
+    
 }
 
 .tabulkaMesta table th {
@@ -36,6 +38,7 @@
     box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0.4);
     padding-right: 10px;
     background: white;
+    border:2px solid red;
 }
 
 .tabulkaMesta table th {
@@ -74,6 +77,7 @@
     -webkit-box-shadow: 1px 1px 5px -4px rgba(0,0,0,0.75);
     -moz-box-shadow: 1px 1px 5px -4px rgba(0,0,0,0.75);
     box-shadow: 1px 1px 5px -4px rgba(0,0,0,0.75);
+    border:2px solid red;
 }
 
 .textPreZObrazenieTabulky:hover{

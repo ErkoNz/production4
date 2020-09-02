@@ -200,7 +200,7 @@ function BarGraf({ props }) {
 
         }
         else if (x < 10000000) {
-            return (x / 100000).toFixed(1) + "M"
+            return (x / 1000000).toFixed(1) + "M"
         }
 
         else if (x < 1000000000) {
@@ -215,7 +215,7 @@ function BarGraf({ props }) {
 
     return (
         <div className="">
-            {console.log("asdasd")}
+            {/* {console.log("asdasd")} */}
             <div className="mainDivPreGrafy" >
 
 

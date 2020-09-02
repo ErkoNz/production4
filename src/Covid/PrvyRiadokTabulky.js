@@ -26,30 +26,24 @@ function PrvyRiadokTabulky(props) {
                 setDataKontinenty([res.data])
             })
 
-        // const fetchData = async () => {
-        //     let result = await fetch("https://disease.sh/v2/continents");
-        //     let response = await result.json();
-        //     setDataKontinenty([response]);
-        // };
-        // fetchData();
-
-        // console.log(pom1)
-        // if (pom1) {
-        //     let result = pom1.filter(obj => {
+        // if (dataKontinenty) {
+        //     let result = dataKontinenty[0].filter(obj => {
         //         return obj.continent === props.kontinent
         //     })
-        //     console.log(result[0])
         //     setDoTabulkyPrvyRiadok(result[0])
-        //     console.log("asdasdasdasdadadadadasd")
         // }
+    }, [props.kontinent])
 
+
+    useEffect(() => {
         if (dataKontinenty) {
             let result = dataKontinenty[0].filter(obj => {
                 return obj.continent === props.kontinent
             })
             setDoTabulkyPrvyRiadok(result[0])
         }
-    }, [props.kontinent])
+    }, [dataKontinenty, props.kontinent])
+
 
 
     const rollDownContintinents = () => {
@@ -87,7 +81,7 @@ function PrvyRiadokTabulky(props) {
     return (
         styleForRollDown && dataKontinenty && sipkaKontinenty && styleForRollDown && props.mainData && props ?
             <>
-                {console.log("PrvyRiadokTabulky")}
+                {/* {console.log("PrvyRiadokTabulky")} */}
                 {/* {console.log(styleForRollDown, dataKontinenty, sipkaKontinenty, styleForRollDown, props.mainData, props)} */}
                 {props.kontinent === "Svet" ?
                     <>
