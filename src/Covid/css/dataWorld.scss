@@ -1,0 +1,242 @@
+@mixin bit-smaller {
+	@media (max-width: 1500px) {
+		@content;
+	}
+}
+
+@mixin lower-then-desktop {
+	@media (max-width: 900px) {
+		@content;
+	}
+}
+
+.cardsDivNew {
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	// border: 2px solid red;
+	width: 65%;
+	// margin-left: 15%;
+	// margin-right: 15%;
+	margin: auto;
+	padding-top: 30px;
+	white-space: nowrap;
+	// width: 100%;
+
+	@include bit-smaller {
+		// margin-left: 5%;
+		// margin-right: 5%;
+		width: 85%;
+	}
+	@include lower-then-desktop() {
+		flex-direction: column;
+		// min-width: 230px;
+		// max-width: 350px;
+		width: 100%;
+	}
+
+	.cardsNew {
+		// border: 1px solid red;
+		width: 30%;
+		position: relative;
+		border-radius: 6px;
+		background: white;
+		margin-bottom: 30px;
+		padding: 15px;
+		padding-top: 10px;
+		margin: 20px;
+		box-shadow: 2px 2px 15px -12px rgba(42, 42, 42, 0.75);
+		letter-spacing: 0.5px;
+
+		@include bit-smaller {
+			// width: 100%;
+		}
+		@include lower-then-desktop() {
+			width: 90%;
+			max-width: 450px;
+			padding-top: 0px;
+			margin-bottom: 0px;
+			transform: scale(0.95);
+			// margin: 20px 0 20px 0;
+			// width: 100%;
+			// max-width: 300px;
+			// width: fit-content;
+
+			// padding: 15px 35px 15px 35px;
+			// width: auto;
+		}
+
+		.iconInCard {
+			// border:1px solid red;
+			// color: rgb(129,0,0);
+			text-align: left;
+			font-size: 1.7rem;
+			position: absolute;
+			margin-top: 5px;
+			margin-left: 5px;
+		}
+		.upperText {
+			line-height: 2;
+			border-bottom: 1px solid rgb(180, 180, 180);
+			// border: 1px solid red;
+			// width: 60%;
+			margin-left: 20%;
+			margin-right: 20%;
+			// letter-spacing: 2px;
+			padding: 5px;
+			color: rgb(90, 90, 90);
+		}
+	}
+
+	.mainText {
+		font-size: 2.7rem;
+		font-weight: 700;
+		// border: 1px solid red;
+		position: relative;
+		span {
+			font-size: .7rem;
+			color: rgb(0, 0, 124);
+		}
+
+		.plusInfected {
+			color: rgb(255, 74, 74);
+			// font-size: 0rem;
+			font-size: .9rem;
+			position: absolute;
+			// margin-right: -2.5rem;
+			bottom: 7px;
+		}
+
+		.plusRecovered {
+			color: green;
+			// font-size: 0rem;
+			font-size: .9rem;
+			position: absolute;
+			// margin-right: -2.5rem;
+			bottom: 7px;
+		}
+	}
+
+	.cases {
+		color: rgb(134, 0, 0);
+	}
+	.recovered {
+		color: rgb(0, 131, 0);
+	}
+	.deaths {
+		color: rgb(87, 87, 87);
+	}
+	.underText {
+		font-size: 0.8rem;
+		color: rgb(110, 110, 110);
+
+		span:nth-child(1) {
+			font-weight: bold;
+		}
+		span:nth-child(n + 2) {
+			font-weight: bold;
+			color: rgb(31, 91, 170);
+		}
+	}
+}
+
+.lastData {
+	// border: 1px solid red;
+	width: fit-content;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 60px;
+	background: white;
+	border-radius: 10px;
+	padding: 5px 20px 5px 20px;
+	box-shadow: 2px 2px 15px -12px rgba(42, 42, 42, 0.75);
+	letter-spacing: .6px;
+	// border: 1px solid yellow;
+	@include lower-then-desktop() {
+		white-space: nowrap;
+		// width: 70%;
+		// min-width: 230px;
+		// max-width: 350px;
+		// transform: scale(0.95);
+		padding: 0;
+
+		width: 95%;
+		// max-width: 350px;
+	}
+	.containerFor2DivsFlex {
+		margin-top: 15px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include lower-then-desktop() {
+			flex-direction: column;
+		}
+
+		div {
+			margin-left: 50px;
+			margin-right: 50px;
+		}
+	}
+	span {
+		font-weight: bold;
+		font-size: 1.3rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		div {
+			display: inline;
+
+			white-space: nowrap;
+			// display: inline;
+		}
+	}
+
+	.newCases {
+		color: rgb(185, 0, 0);
+	}
+	.newTested {
+		color: rgb(16, 9, 122);
+		color: salmon;
+	}
+	.negatTested {
+		color: rgb(39, 189, 89);
+		color: rgb(17, 6, 173);
+	}
+	.newRecovered {
+		color: rgb(0, 131, 0);
+	}
+	.newDeaths {
+		color: rgb(87, 87, 87);
+	}
+
+	// span:nth-child(n + 1) {
+	// 	color: black;
+	// }
+	// span:nth-child(n + 1) {
+	// 	color: green;
+	// }
+	// span:nth-child(n + 1) {
+	// 	color: yellow;
+	// }
+	h1 {
+		// margin: 0;
+		margin-top: 5px;
+		padding-bottom: 5px;
+		color: rgb(77, 77, 77);
+		white-space: nowrap;
+		position: relative;
+		font-size: 1.6rem;
+
+		&::after {
+			background: rgb(212, 212, 212);
+			position: absolute;
+			// width: 30%;
+			height: 1px;
+			content: '';
+			bottom: -5px;
+			left: 35%;
+			right: 35%;
+			// margin-bottom: 10px;
+		}
+	}
+}

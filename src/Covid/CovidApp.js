@@ -2,15 +2,10 @@ import React, { useState, useEffect } from 'react'
 import './css/covid.css'
 import './css/covidDesign.css'
 import { Link } from 'react-router-dom'
-import coronaIcon from "../imgs/coronaIcon.svg"
-// import CovidTable from "./CovidTable"
 import SvetTabulka from "./SvetTabulka"
-import { GiDeathSkull } from "react-icons/gi";
 import { AiOutlineDoubleRight } from "react-icons/ai";
-import { FaPlusCircle } from "react-icons/fa";
-import DougnatChart from "./DougnatChart"
-// import DataGrid from "./DataGrid"
-import FormatNumber from './components/FormatNumber'
+// import DougnatChart from "./DougnatChart"
+import DataWorld from './components/DataWorld'
 
 function CovidApp() {
     const [mainData, setMainData] = useState()
@@ -50,21 +45,6 @@ function CovidApp() {
         fetchData()
     }, [])
 
-    function numberTrans3(a, b) {
-        if (a) {
-            let output = b / (a / 100)
-            output = b / (a / 100)
-            output = output.toFixed(3)
-            output = output.toString()
-            output = output.replace(".", ",")
-            return (
-                <div className="aktiveNakazenych">
-                    <span>V percentách:</span> {output}%
-                </div>
-            )
-        }
-    }
-
     function sortBy(key) {
         setState({
             countriesData: countriesData.sort((a, b) => (
@@ -89,61 +69,8 @@ function CovidApp() {
             || state.direction['recovered']
             || state.direction['todayDeaths']) ?
             <div className="covidApp">
-                {
-                    mainData ?
-                        <div className="cardsDiv">
-                            <div className="cards">
-                                <div className="topCard">
-                                    <div className="obrDiv">
-                                        <div className="circle">
-                                            <img alt="" src={coronaIcon} />
-                                        </div>
-                                    </div>
-                                    <div className="textCard">Počet nakazených</div>
-                                </div>
-                                <div className="mainText">
-                                    <FormatNumber prop={mainData[0].cases} />
-                                    <div className="aktiveNakazenych">
-                                        <span>Počet aktívnych prípadov:</span> <FormatNumber prop={mainData[0].active} />
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div className="cards">
-                                <div className="topCard">
-                                    <div className="obrDiv">
-                                        <div className="circle HP">
-                                            <FaPlusCircle color={"green"} />
-                                        </div>
-                                    </div>
-                                    <div className="textCard"> Počet vyliečených</div>
-                                </div>
-                                <div className="mainText">
-                                    <FormatNumber prop={mainData[0].recovered} />
-                                    {numberTrans3(mainData[0].cases, mainData[0].recovered)}
-                                </div>
-                            </div>
-
-                            <div className="cards">
-                                <div className="topCard">
-                                    <div className="obrDiv">
-                                        <div className="circle skull">
-                                            <GiDeathSkull color={"white"} />
-                                        </div>
-                                    </div>
-                                    <div className="textCard"> Počet úmrtí</div>
-                                </div>
-                                <div className="mainText">
-                                    <FormatNumber prop={mainData[0].deaths} />
-                                    {numberTrans3(mainData[0].cases, mainData[0].deaths)}
-                                </div>
-                            </div>
-                        </div>
-                        : ''
-                }
-                {/* <DataGrid /> */}
-                <DougnatChart cases={doughnatData[0]} recovered={doughnatData[1]} deaths={doughnatData[2]} />
+                <DataWorld mainData={mainData} />
+                {/* <DougnatChart cases={doughnatData[0]} recovered={doughnatData[1]} deaths={doughnatData[2]} /> */}
                 <br></br>
                 <br></br>
                 <div className="SlovenskeUdajeLink" >
@@ -154,16 +81,9 @@ function CovidApp() {
                 <div className="SlovenskeUdajeLink" >
                     <Link to={`/Covid/CovidApp/Svet`} >Grafy pre celý svet <AiOutlineDoubleRight className="iconSlovUdaje" />
                     </Link>
-
                 </div>
-                {/* <Link to={`/Covid/CovidApp/${item.country}`} > */}
-
-                {/* <div className="SlovenskeUdajeLink" ><Link to={`/Covid/SamostatnaKrajina/GrafyKrajina/${Slovakiatest}`}>samosts údaje </Link></div> */}
-                {/* <Link to={`/ReceptyV2/ReceptyV2/${recepty.recipe.label}`}></Link> */}
                 <br></br><br></br>
                 <SvetTabulka countriesData={countriesData} mainData={mainData} sortBy={sortBy} />
-                {/* <SvetTabulka countriesData={countriesData} mainData={mainData} sortBy={useMemo(() => { return sortBy }, [])} /> */}
-
             </div >
             : null
 

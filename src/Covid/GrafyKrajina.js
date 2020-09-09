@@ -12,7 +12,7 @@ function GrafyKrajina(props) {
     const [LastDayData, setLastDayData] = useState()
 
     const [loadMoreData, setLoadMoreData] = useState({
-        text: 'Zobraziť viac dni',
+        text: 'Zobraziť viac dní',
         bool: false
     })
 
@@ -60,11 +60,6 @@ function GrafyKrajina(props) {
                 }
                 else return null
             })
-
-            // let testingX = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-            // console.log("length: " + testingX.length)
-            // testingX = testingX.slice(-8)
-
 
             valuesCases.map((oneCase, id) => {
                 valueActiveCases[id] = oneCase - valueRecovered[id] - valueDeaths[id]
@@ -167,7 +162,6 @@ function GrafyKrajina(props) {
         fetchData()
 
     }, [loadMoreData, match.params.id, LastDayData])
-    // }, [loadMoreData])
 
 
     const ZmenitLoadMoreData = () => {

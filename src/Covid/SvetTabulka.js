@@ -164,7 +164,6 @@ function SvetTabulka(props) {
     return (
         ikonka && kontinent && props ?
             <>
-                {/* {console.log("svetTabulka")} */}
                 <input type="text" id="myInput" onKeyUp={myFunction} placeholder="Hľadať.." className="inputSearch" />
                 <div className="kontinenty">
                     <button onClick={() => dispatch({ type: 'Svet' })} style={style4Buttons.Svet}>
@@ -285,21 +284,31 @@ function SvetTabulka(props) {
                                         scrollPerformance || id < 20 ?
                                             <tr className="scrollingSvet" key={id} style={greenBackgroundforTR(item.active)}>
                                                 <td style={{ width: '100px' }}>
-                                                    <Link to={{
-                                                        state: LastDataFunction(item.country), pathname: `/Covid/CovidApp/${item.country}`
-                                                    }}>
-                                                        {/* <Link to={`/Covid/CovidApp/${item.country}`
-                                                    }> */}
-                                                        <span className="KrajinaLink" >{item.country}</span>
-
-                                                        {item.tests > 0 ?
-                                                            <div className="firstCase">
-                                                                <div className="firstCaseNumber">
-                                                                    <FormatNumber prop={item.tests} />
+                                                    {item.country === "Slovakia" ?
+                                                        <Link to="/Covid/CovidSK">
+                                                            <span className="KrajinaLink" >{item.country}</span>
+                                                            {item.tests > 0 ?
+                                                                <div className="firstCase">
+                                                                    <div className="firstCaseNumber">
+                                                                        <FormatNumber prop={item.tests} />
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            : null}
-                                                    </Link>
+                                                                : null}
+                                                        </Link>
+                                                        :
+                                                        <Link to={{
+                                                            state: LastDataFunction(item.country), pathname: `/Covid/CovidApp/${item.country}`
+                                                        }}>
+                                                            <span className="KrajinaLink" >{item.country}</span>
+                                                            {item.tests > 0 ?
+                                                                <div className="firstCase">
+                                                                    <div className="firstCaseNumber">
+                                                                        <FormatNumber prop={item.tests} />
+                                                                    </div>
+                                                                </div>
+                                                                : null}
+                                                        </Link>
+                                                    }
 
                                                 </td>
                                                 <td><FormatNumber prop={item.cases} /></td>
@@ -335,19 +344,36 @@ function SvetTabulka(props) {
                                                     {/* {console.log(item.country)} */}
 
                                                     <td style={{ width: '100px' }}>
-                                                        <Link to={{
-                                                            state: LastDataFunction(item.country), pathname: `/Covid/CovidApp/${item.country}`
-                                                        }}>
-                                                            <span className="KrajinaLink" >{item.country}</span>
+                                                        {item.country === "Slovakia" ?
+                                                            <Link to="/Covid/CovidSK" >
 
-                                                            {item.tests > 0 ?
-                                                                <div className="firstCase">
-                                                                    <div className="firstCaseNumber">
-                                                                        <FormatNumber prop={item.tests} />
+                                                                <span className="KrajinaLink" >{item.country}</span>
+                                                                {item.tests > 0 ?
+                                                                    <div className="firstCase">
+                                                                        <div className="firstCaseNumber">
+                                                                            <FormatNumber prop={item.tests} />
+                                                                        </div>
                                                                     </div>
-                                                                </div>
-                                                                : null}
-                                                        </Link>
+                                                                    : null}
+                                                            </Link>
+                                                            :
+
+                                                            <Link to={{
+                                                                state: LastDataFunction(item.country), pathname: `/Covid/CovidApp/${item.country}`
+                                                            }}>
+                                                                <span className="KrajinaLink" >{item.country}</span>
+
+                                                                {item.tests > 0 ?
+                                                                    <div className="firstCase">
+                                                                        <div className="firstCaseNumber">
+                                                                            <FormatNumber prop={item.tests} />
+                                                                        </div>
+                                                                    </div>
+                                                                    : null}
+                                                            </Link>
+
+                                                        }
+
 
                                                     </td>
                                                     <td><FormatNumber prop={item.cases} /></td>
@@ -376,20 +402,31 @@ function SvetTabulka(props) {
                                                 <td style={{ width: '100px' }}>
                                                     {/* <Link to={`/Covid/CovidApp/${item.country}`} > */}
 
-                                                    <Link to={{
-                                                        state: LastDataFunction(item.country), pathname: `/Covid/CovidApp/${item.country}`
-                                                    }}>
-
-
-                                                        <span className="KrajinaLink" >{item.country}</span>
-                                                        {item.tests > 0 ?
-                                                            <div className="firstCase">
-                                                                <div className="firstCaseNumber">
-                                                                    <FormatNumber prop={item.tests} />
+                                                    {item.country === "Slovakia" ?
+                                                        <Link to="/Covid/CovidSK">
+                                                            <span className="KrajinaLink" >{item.country}</span>
+                                                            {item.tests > 0 ?
+                                                                <div className="firstCase">
+                                                                    <div className="firstCaseNumber">
+                                                                        <FormatNumber prop={item.tests} />
+                                                                    </div>
                                                                 </div>
-                                                            </div>
-                                                            : null}
-                                                    </Link>
+                                                                : null}
+                                                        </Link>
+                                                        :
+                                                        <Link to={{
+                                                            state: LastDataFunction(item.country), pathname: `/Covid/CovidApp/${item.country}`
+                                                        }}>
+                                                            <span className="KrajinaLink" >{item.country}</span>
+                                                            {item.tests > 0 ?
+                                                                <div className="firstCase">
+                                                                    <div className="firstCaseNumber">
+                                                                        <FormatNumber prop={item.tests} />
+                                                                    </div>
+                                                                </div>
+                                                                : null}
+                                                        </Link>
+                                                    }
 
                                                 </td>
                                                 <td><FormatNumber prop={item.cases} /></td>

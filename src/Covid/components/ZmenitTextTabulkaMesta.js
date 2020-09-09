@@ -5,7 +5,7 @@ export default function ZmenitTextTabulkaMesta(textPreZobrazenieObci, setTextPre
             text: "Schovať údaje o jedntlivých obciach"
         })
         setShowHide({
-            display: 'flex',
+            maxHeight: '600px',
         })
         setSipkaObce({
             transform: "rotateX(180deg)",
@@ -20,7 +20,8 @@ export default function ZmenitTextTabulkaMesta(textPreZobrazenieObci, setTextPre
             text: "Zobraziť údaje o jedntlivých obciach"
         })
         setShowHide({
-            display: 'none',
+            maxHeight: '0px',
+
         })
         setSipkaObce({
             transform: "rotateX(0deg)",

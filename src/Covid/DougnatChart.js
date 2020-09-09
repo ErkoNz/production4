@@ -44,7 +44,7 @@ function DougnatChart(props) {
                 <div className="dougnut">
                     <Doughnut
                         data={data}
-                        height={300}
+                        height={250}
                         options={{
                             maintainAspectRatio: false,
                             tooltips: {

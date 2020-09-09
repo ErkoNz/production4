@@ -13,6 +13,7 @@ const LOCAL_STORAGE_KEY_STAR = 'starsTabulkaMesta'
 
 
 function TabulkaMesta(props) {
+    // const [ShowTableMestaOnClick, setShowTableMestaOnClick] = useState()
     const data = props.tabulkaData
     const [sorting, setSorting] = useState({
         desc: true,
@@ -25,9 +26,11 @@ function TabulkaMesta(props) {
             display: 'none',
         }
     })
-    const [ShowHide, setShowHide] = useState({
-        display: 'none'
-    })
+    // const [ShowHide, setShowHide] = useState({
+    //     display: 'none'
+    // })
+
+    const [ShowHide, setShowHide] = useState()
     const [textPreZobrazenieObci, setTextPreZobrazenieObci] = useState({
         boolean: true,
         text: "Zobraziť údaje o jedntlivých obciach"
@@ -43,6 +46,9 @@ function TabulkaMesta(props) {
 
 
     useEffect(() => {
+        setShowHide({
+            maxHeight: '0px',
+        })
         CompareCislo(data, true, JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)))
         if (JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY)) === "amountDelta")
             setStylesArrows({
@@ -92,10 +98,11 @@ function TabulkaMesta(props) {
             <div className="textPreZObrazenieTabulky" onClick={() => ZmeniTextTabulkaMesta(textPreZobrazenieObci, setTextPreZobrazenieObci, setShowHide, setSipkaObce)}>{textPreZobrazenieObci.text} <IoIosArrowDown style={sipkaObce} /></div>
             <div style={ShowHide} className="tabulkaOkrajDivMain">
 
-                <input type="text" id="myInput" onKeyUp={searchInputMesta} placeholder="Hľadať.." className="inputSearch" />
-                <div className="tabulkaMesta">
 
-                    <table id="myTable">
+                <input type="text" id="myInput" onKeyUp={searchInputMesta} placeholder="Hľadať.." className="inputSearch" />
+                <div className="tabulkaMesta" >
+
+                    <table id="myTable" className="tabulkaMesta">
                         <thead>
                             <tr >
                                 <th onClick={() => SetingStarsAndLocalStorage()}>Obec {ShowOnlyStars()}</th>
