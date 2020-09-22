@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/production4/static/css/main.104de629.chunk.css",
+    "main.css": "/production4/static/css/main.8f57c3f3.chunk.css",
     "main.js": "/production4/static/js/main.fd618193.chunk.js",
     "main.js.map": "/production4/static/js/main.fd618193.chunk.js.map",
     "runtime-main.js": "/production4/static/js/runtime-main.8096dec9.js",
@@ -8,9 +8,9 @@
     "static/js/2.82f66ad1.chunk.js": "/production4/static/js/2.82f66ad1.chunk.js",
     "static/js/2.82f66ad1.chunk.js.map": "/production4/static/js/2.82f66ad1.chunk.js.map",
     "index.html": "/production4/index.html",
-    "precache-manifest.21250fec4aab21ac93eb328cd42774aa.js": "/production4/precache-manifest.21250fec4aab21ac93eb328cd42774aa.js",
+    "precache-manifest.ce21caf06f5a830b469afd0d5b8eb102.js": "/production4/precache-manifest.ce21caf06f5a830b469afd0d5b8eb102.js",
     "service-worker.js": "/production4/service-worker.js",
-    "static/css/main.104de629.chunk.css.map": "/production4/static/css/main.104de629.chunk.css.map",
+    "static/css/main.8f57c3f3.chunk.css.map": "/production4/static/css/main.8f57c3f3.chunk.css.map",
     "static/js/2.82f66ad1.chunk.js.LICENSE.txt": "/production4/static/js/2.82f66ad1.chunk.js.LICENSE.txt",
     "static/media/earth.svg": "/production4/static/media/earth.cdc4522b.svg",
     "static/media/slovakiaIcon.svg": "/production4/static/media/slovakiaIcon.a29682dd.svg"
@@ -18,7 +18,7 @@
   "entrypoints": [
     "static/js/runtime-main.8096dec9.js",
     "static/js/2.82f66ad1.chunk.js",
-    "static/css/main.104de629.chunk.css",
+    "static/css/main.8f57c3f3.chunk.css",
     "static/js/main.fd618193.chunk.js"
   ]
 }
