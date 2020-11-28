@@ -1,0 +1,12 @@
+{
+  "_id": "5cf0029caff5056591b0ce7d",
+  "firstname": "Jane",
+  "lastname": "Wu",
+  "address": {
+    "street": "1 Circle Rd",
+    "city": "Los Angeles",
+    "state": "CA",
+    "zip": "90404"
+  },
+  "hobbies": ["surfing", "coding"]
+}
