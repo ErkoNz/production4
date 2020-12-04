@@ -16,8 +16,7 @@ import GrafyKrajina from './Covid/GrafyKrajina';
 // import { polyfill } from 'es6-promise'; polyfill();
 // require('es6-promise').polyfill();
 // require('isomorphic-fetch');
-
-//from masterssssssssssss
+//asdasdads
 function App() {
   return (
     <Router basename="/">
