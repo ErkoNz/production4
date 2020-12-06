@@ -10,14 +10,7 @@ import CovidSK from './Covid/CovidSK';
 import GrafyKrajina from './Covid/GrafyKrajina';
 // const CovidSK = React.lazy(() => import('./Covid/CovidSK'));
 
-// import CovidApp from './Covid/CovidApp';
-// import CovidSK from './Covid/CovidSK';
-// import TodoApp from './Todo/TodoApp';
-// import { polyfill } from 'es6-promise'; polyfill();
-// require('es6-promise').polyfill();
-// require('isomorphic-fetch');
 
-//from masterssssssssssss
 function App() {
   return (
     <Router basename="/">
