@@ -18,9 +18,7 @@ import GrafyKrajina from './Covid/GrafyKrajina';
 // require('es6-promise').polyfill();
 // require('isomorphic-fetch');
 //asdasdads
-=======
 
->>>>>>> 183e082feef3889c66c8b0defc8284cd1ac0b79d
 function App() {
   return (
     <Router basename="/">
