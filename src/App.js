@@ -15,6 +15,7 @@ import GrafyKrajina from './Covid/GrafyKrajina';
 // require('es6-promise').polyfill();
 // require('isomorphic-fetch');
 //asdasdads
+//edited in gitub
 
 function App() {
   return (
