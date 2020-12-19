@@ -10,12 +10,8 @@ import CovidSK from './Covid/CovidSK';
 import GrafyKrajina from './Covid/GrafyKrajina';
 //asdasd last 22 33
 //master 22 34 add this to new branch
-<<<<<<< Updated upstream
-
 //from github
-=======
 //asdasd
->>>>>>> Stashed changes
 function App() {
   return (
     <Router basename="/">
