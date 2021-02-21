@@ -1,18 +1,5 @@
-"date";"Region";"newcases";"positive"
-2021-02-18;"Banskobystrický kraj";648;53124
-2021-02-17;"Banskobystrický kraj";799;52476
-2021-02-16;"Banskobystrický kraj";718;51677
-2021-02-15;"Banskobystrický kraj";672;50959
-2021-02-14;"Banskobystrický kraj";187;50287
-2021-02-13;"Banskobystrický kraj";601;50100
-2021-02-12;"Banskobystrický kraj";833;49499
-2021-02-11;"Banskobystrický kraj";689;48666
-2021-02-10;"Banskobystrický kraj";653;47977
-2021-02-09;"Banskobystrický kraj";678;47324
-2021-02-08;"Banskobystrický kraj";692;46646
-2021-02-07;"Banskobystrický kraj";212;45954
-2021-02-06;"Banskobystrický kraj";723;45742
-2021-02-05;"Banskobystrický kraj";640;45019
-2021-02-04;"Banskobystrický kraj";653;44379
-2021-02-03;"Banskobystrický kraj";593;43726
-2021-02-02;"Banskobystrický kraj";596;43133
+"date","Region","newcases","positive"
+2021-02-18,"Banskobystrický kraj",648,53124
+2021-02-17,"Banskobystrický kraj",799,52476
+2021-02-16,"Banskobystrický kraj",718,51677
+2021-02-15,"Banskobystrický kraj",672,50959
